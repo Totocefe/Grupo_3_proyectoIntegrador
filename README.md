@@ -2,3 +2,11 @@ Nuestro sitio es un e-commerce gastronomico, nuestra propuesta es poner al alcan
 El grupo esta integrado por 4 personas de ditintos países de donde surgió la idea de compartir con el resto algo que pueda representar de donde venimos.
 Tomás Amadeo, 39 años , Bs.As. Argentina.
 Maira Salinas, 31 años, Neuquen, Argentina
+
+
+sitios de referencia:
+https://sites.google.com/view/migustosucursales/carta-digital
+https://www.estudioberna.com/
+https://tepido.com.ar/
+https://www.sushipop.com.ar/
+https://cervezaberlina.com/
