@@ -10,3 +10,5 @@ https://www.estudioberna.com/
 https://tepido.com.ar/
 https://www.sushipop.com.ar/
 https://cervezaberlina.com/
+
+Estos sitios fueron tomados como referencia debido a su diseño visual y estructural, su  navegabilidad y su simpleza. 
