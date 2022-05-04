@@ -2,6 +2,7 @@ Nuestro sitio es un e-commerce gastronomico, nuestra propuesta es poner al alcan
 El grupo esta integrado por 4 personas de ditintos países de donde surgió la idea de compartir con el resto algo que pueda representar de donde venimos.
 Tomás Amadeo, 39 años , Bs.As. Argentina.
 Maira Salinas, 31 años, Neuquen, Argentina
+Angela Pantoja, 28 años, Ibague, Colombia
 
 
 sitios de referencia:
@@ -10,5 +11,7 @@ https://www.estudioberna.com/
 https://tepido.com.ar/
 https://www.sushipop.com.ar/
 https://cervezaberlina.com/
+https://felolaserena.com/
+https://lacarniceriagourmet.com/
 
-Estos sitios fueron tomados como referencia debido a su diseño visual y estructural, su  navegabilidad y su simpleza. 
+Estos sitios fueron tomados como referencia debido a su diseño visual y estructural, su navegabilidad y su simpleza. 
