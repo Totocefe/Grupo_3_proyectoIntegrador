@@ -1,0 +1,22 @@
+{
+  "name": "grupo_3_proyectointegrador",
+  "version": "1.0.0",
+  "description": "Nuestro sitio es un e-commerce gastronomico, nuestra propuesta es poner al alcance de los usuarios una amplia variedad de productos gastronomicos regionales. Nuestro público objetivo son todos aquellos curiosos que estan en la constante busqueda de nuevas experiencias culinarias como así tambien todo aquel que esta lejos de su país de origen  y quiere, al menos por un rato, sentirse cerca de casa.\r El grupo esta integrado por 4 personas de ditintos países de donde surgió la idea de compartir con el resto algo que pueda representar de donde venimos.\r Tomás Amadeo, 39 años , Bs.As. Argentina.\r Maira Salinas, 31 años, Neuquen, Argentina",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Totocefe/Grupo_3_proyectoIntegrador.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Totocefe/Grupo_3_proyectoIntegrador/issues"
+  },
+  "homepage": "https://github.com/Totocefe/Grupo_3_proyectoIntegrador#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}

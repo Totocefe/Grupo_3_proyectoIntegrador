@@ -1,0 +1,128 @@
+*{ margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+    
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+/* aca comienza el header*/
+.main-header{
+   background-color: white;
+   box-shadow: 0 0 20px 0;
+   padding: 20px;
+}
+
+.top-header{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+    width: 100%;
+}
+
+
+
+
+
+.fa-bars{
+    color: white;
+    font-size: 60%;
+   
+}
+
+
+       
+.burguer-button{
+    height: fit-content;
+    transition: all;
+} 
+
+
+.burguer-button i{
+    font-size: 5vw;
+    color: rgb(99, 153, 99);
+    
+
+}
+
+
+
+.logo{
+    width: 30%;
+    margin: auto;
+    padding-left: 3vw;
+    
+
+}
+
+.logo img{
+   
+    width: 30vw;
+}
+
+
+.log-in{
+    
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.fa-user-alt{
+    color: rgb(99, 153, 99);
+    font-size: 5vw;
+}
+
+
+
+.search-bar{
+    display: flex;
+    margin: auto;
+}
+
+.search-bar input{
+   
+    width: 88%;
+    height: 4vw;
+}
+
+.search-bar p{
+    border: solid 1px black;
+    background-color: rgb(99, 153, 99);
+    margin-bottom: 10px;
+    margin: auto;
+    width: 33%;
+    font-size: 2vw;
+  
+   
+
+}
+
+.fa-search{
+     width: 1.5%;
+     color: white;
+
+}
+
+.cart{
+    display: flex;
+  
+  
+}
+
+.fa-shopping-cart{
+    color: rgb(99, 153, 99) ;
+    font-size: 5vw;
+}
+
+/*aca comienza el main*/
+
+.body-main{
+    background-image: url(/images/terrazas-de-cultivos.jpg);
+}
