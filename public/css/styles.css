@@ -82,8 +82,8 @@ body{
 
 
 .search-bar{
-    display: flex;
-    margin: auto;
+    display: none;
+    
 }
 
 .search-bar input{
@@ -125,4 +125,53 @@ body{
 
 .body-main{
     background-image: url(/images/terrazas-de-cultivos.jpg);
+    width: 100%;
+  
 }
+
+.cuzqueña img{
+    width:33vw;
+}
+
+/*aca comienza el footer */
+
+.main-footer{
+    box-shadow: 20px 0 0 0;
+    background-color: white;
+}
+.sub-footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.logo-footer{
+    width :15vw;
+
+}
+
+.copyrigth{
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.social-network{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-network p{
+    
+    align-self: center;
+    font-size: 20px;
+    margin-left: 10px;
+    
+}
+
+.social-network i{
+    color: rgb(99, 153, 99);
+    font-size: 4vw;
+
+}
+
