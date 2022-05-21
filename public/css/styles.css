@@ -133,7 +133,7 @@ body{
 
 }
 
-/*aca comienza el main*/
+/*aca comienza el main   de home.html*/
 
 .body-main{
     background-image: url(/images/terrazas-de-cultivos.jpg);
@@ -145,7 +145,7 @@ body{
 .new-arrivals{
     width: 20%;
     background-color: white;
-    
+    margin-top: 1vw;
     color: rgb(99, 153, 99);
 }
 
@@ -158,18 +158,32 @@ body{
     
 }
 
+
+
  h4{
     height: 10vw;
     font-size: 3vw;
     font-weight: 900;
+    font-family: 'Barlow';
+    padding-top: 3vw;
 }
 
 .novedades article{
     width: 25%;
     padding: 5px;
     border-left: solid 2px grey;
+    position: relative;
 }
 
+.novedades p{
+    font-size: 2vw;
+    font-weight: 900;
+    display: none;
+}
+
+.novedades article:hover p{
+    display: block;
+}
 
 .yerba img{
     width: 19.4vw;
@@ -189,23 +203,27 @@ body{
 
 img.new{
     width: 8vw;
+    position: absolute;
+    right: 0;
+    top: -2vw;
 }
 
 
 .products{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 15%;
 }
 
 main section article{
     padding: 20px;
+   
 }
 
 main section article img{
     width:36vw;
-    border-radius: 13%;
+  
    
     
 }
@@ -215,18 +233,96 @@ main section article img{
 }
 
 .bottom-article{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin-top: 3px;
+    position: relative;
+    width: 36vw;
+    padding: 1vw;
+    color: rgb(99, 153, 99) ;
+
+}
+
+.onsale{
+    width: 7vw;
+    position: absolute;
+    left: 0vw;
     display: none;
+}
+
+.cuzqueña{
+    right: 30vw;
+}
+
+.bottom-article p{
+    font-size: 3vw;
+    font-family: 'Barlow';
+    font-weight: 700;
+}
+
+.ddl .bottom-article{
+    width: 31vw;
+}
+
+/*aca comienza el main del productdetail */
+
+.main-container{
+    width: 50vw;
+    height: 90vw;
+    margin-left: 5vw;
+    border-top: solid 1px gray;
+    
+}
+
+.second-container{
+    width: 45vw;
+    height: 80vw;
+    background-color: white;
+    margin: auto;
+    margin-top: 5vw;
+
 
 }
 
-.products article:hover .bottom-article{
-    display: block;
+.article-selected{
+    width: 40vw;
+    height: 80vw;
+    margin: auto;
+}
+
+
+.article-selected img{
+    width: 100%;
 }
 
 
 
+
+
+.description{
+    font-family: 'Barlow';
+    font-size: 5vw;
+    margin-top: 2vw;
+}
+
+.price{
+    font-family: 'Barlow';
+    font-size: 4vw;
+    margin-top: 2vw;
+    color: red;
+
+}
+
+.add-cart{
+    margin-top: 2vw;
+}
+
+.add-cart a{
+    text-decoration: none;
+    color: rgb(99, 153, 99) ;
+    font-family: 'Barlow';
+    font-size: 3vw;
+   
+}
 
 
 /*aca comienza el footer */
