@@ -139,13 +139,14 @@ body{
     background-image: url(/images/terrazas-de-cultivos.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+   
     
   
 }
 .new-arrivals{
     width: 20%;
     background-color: white;
-    margin-top: 1vw;
+  
     color: rgb(99, 153, 99);
 }
 
@@ -270,6 +271,7 @@ main section article img{
     height: 90vw;
     margin-left: 5vw;
     border-top: solid 1px gray;
+   
     
 }
 
@@ -323,6 +325,74 @@ main section article img{
     font-size: 3vw;
    
 }
+
+/*aca comienza el product cart*/
+
+.information{
+    width: 100%;
+    height: 70vw;
+    
+}
+
+.main-information{
+    background-color: rgba(241, 241, 241, 0.733);
+    width: 70vw;
+    height: 85%;
+    margin: auto;
+    
+
+}
+
+.main-information p{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+.main-information div{
+    width: 3vw;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+
+
+.main-information a{
+    text-decoration: none;
+    color: rgb(99, 153, 99);
+}
+
+.details{
+    width: 100%;
+    height: 33vw;
+    background-color: rgba(241, 241, 241, 0.733);
+    border: solid 1px rgb(99, 153, 99);
+    padding: 2vw;
+}
+
+.recap img{
+    width: 15vw;
+}
+
+.recap p{
+    font-family: "Barlow";
+    font-size: 3vw;
+}
+
+/*aca comienza el login*/
+
+.h3-login{
+    margin-top: 0px;
+    padding: 10px;
+}
+
 
 
 /*aca comienza el footer */
