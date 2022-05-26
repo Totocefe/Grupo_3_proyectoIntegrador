@@ -15,3 +15,5 @@ https://felolaserena.com/
 https://lacarniceriagourmet.com/
 
 Estos sitios fueron tomados como referencia debido a su diseño visual y estructural, su navegabilidad y su simpleza. 
+
+Link al storyboard https://trello.com/b/CYDTsg6J/proyecto-grupo-3-andina
