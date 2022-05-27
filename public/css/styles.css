@@ -1,7 +1,7 @@
 *{ margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+    font-family: "Barlow";
     
 }
 
@@ -326,6 +326,7 @@ main section article img{
    
 }
 
+
 /*aca comienza el product cart*/
 
 .information{
@@ -389,6 +390,11 @@ h3{
 .recap p{
     font-family: "Barlow";
     font-size: 3vw;
+}
+
+.recap a{
+    text-decoration: none;
+    color: rgb(99, 153, 99);
 }
 
 /*aca comienza el login*/
