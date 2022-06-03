@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head')%>
+<body>
+    <%-include('./partials/header')%>
+    <main class="body-main">
+        <section class="information">
+            <div class="main-information">
+                <p>¿Ya tenes una cuenta? <a href="/login"> inicia sesíon</a> para finalizar la compra</p>
+                <h3>Datos de envío:</h3>
+                <div class="form">
+                <form action="/" method="post">
+                    <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre">
+                    </div>
+                    <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido">
+                    </div>
+                    <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                    </div>
+                    <div>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" name="direccion">
+                    </div>
+                    <div>
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" name="ciudad">
+                    </div>
+                    <div>
+                    <label for="codigo-postal">Codigo postal:</label>
+                    <input type="number" name="codigo-postal">
+                    </div>
+                    <div>
+                    <label for="pais">País:</label>
+                    <input type="text" name="pais">
+                    </div>
+                    <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" name="telefono">
+                    </div>
+                    <p><a href="#">Continuar</a></p>
+
+                 
+                </form>
+                </div>
+            </div>
+        </section>
+        <section class="details">
+            <div class="recap">
+                <img src="/images/cuzqueña.jpg" alt="">
+                <p>Resúmen del pedido:</p>
+                <p>Articulos:</p>
+                <p><a href="#">Agregar mas articulos</a></p>
+                <p><a href="#">Eliminar articulos</a></p>
+                <p>Subtotal $</p>
+                <p>Calcular envío</p>
+                <p>Total $</p>
+            </div>
+        </section>
+    </main>
+    <%-include('./partials/footer')%>
+</body>
+</html>
+    

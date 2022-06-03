@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head')%>
+<body>
+    <%-include('./partials/header')%>
+    <main class="body-main">
+        <section class="information">
+            <div class="main-information">
+                
+                <form action="/" method="post">
+                   <h3 class="h3-login">
+                       Ingresá con tu cuenta
+                   </h3>
+                   
+                    <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                    </div>
+                    <div>
+                        <label for="password">Contraseña</label>
+                        <input type="text" name="password" >
+                    </div>
+                    <div class="forgot">
+                        <p><a href="#">Olvidaste tu contraseña?</a></p>
+                    </div>
+                   
+                   
+                    
+                   
+                   
+                    <div>
+                        <button type="submit" class="buttons">Enviar</button>
+
+                    </div>
+                    
+
+                 
+                </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%-include('./partials/footer')%>
+</body>
+</html>
+    

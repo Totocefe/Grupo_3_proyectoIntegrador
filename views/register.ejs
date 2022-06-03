@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head')%>
+<body>
+    <%-include('./partials/header')%>
+
+        <main class="body-main">
+            <section class="information">
+                <div class="main-information">
+                    
+                    <form action="/" method="post">
+                       <h3 class="h3-login">
+                           Registrate
+                       </h3>
+                       <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre">
+                        </div>
+                        <div>
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" name="apellido">
+                            </div>
+                       
+                        <div>
+                        <label for="email">Email:</label>
+                        <input type="text" name="email">
+                        </div>
+                        <div>
+                            <label for="password">Contraseña</label>
+                            <input type="text" name="password" >
+                        </div>
+                        <div>
+                            <label for="confirmar-contraseña">Confirmar contraseña:</label>
+                            <input type="text" name="confirmar-contraseña">
+                            </div>
+                       
+                       
+                        
+                       
+                       
+                        <div>
+                            <button type="submit" class="buttons">Enviar</button>
+    
+                        </div>
+                        
+    
+                     
+                    </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%-include('./partials/footer')%>
+   </body>
+   </html>
+              
+    
