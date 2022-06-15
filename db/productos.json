@@ -1,0 +1,73 @@
+[   
+    {
+        "product":true,
+        "nombre": "cuzqueña",
+        "imagen": "/images/cuzqueña.jpg",
+        "descripcion": "Cerveza Cuzqueña.(Orígen Perú)",
+        "precio": "1000"
+        
+    },
+    {
+        "product":true,
+        "nombre": "cachaza",
+        "imagen": "/images/cachaza.jpg",
+        "descripcion": "Cachaza Velho Barreiro.(Orígen Brasil)",
+        "precio": "1000"
+        
+    },
+ 
+    {
+        "product":true,
+        "nombre": "harina",
+        "imagen": "/images/harina.jpg",
+        "descripcion": "Pan.(Orígen Venezuela)",
+        "precio": "1000"
+    },
+    {
+        "product":false,
+        "nombre": "pisco",
+        "imagen": "images/pisco.jp",
+        "descripcion": "Pisco Cuatro Gallos.(Orígen Perú)",
+        "precio": "1000"
+        
+    },
+    {
+        "product":false,
+        "nombre": "vino",
+        "imagen": "/images/vino.jpg",
+        "descripcion": "Vino tinto Casillero del Diablo. (Orígen Chile)",
+        "precio": "1000"
+        
+    },
+    {
+        "product":false,
+        "nombre": "chocolate",
+        "imagen": "/images/chocolate.jpg",
+        "descripcion": "Chocolate con maní Sublime. (Orígen Perú)",
+        "precio": "1000"
+        
+    },
+    {
+        "product":false,
+        "nombre": "cafe",
+        "imagen": "/images/cafe.webp",
+        "descripcion": "Café juan Valdez. (Orígen Colombia)",
+        "precio": "1000"
+        
+    },
+    {
+        "product":false,
+        "nombre": "yerba",
+        "imagen": "/images/yerba.webp",
+        "descripcion": "Yerba mate Canarias",
+        "precio": "1000"
+        
+    },
+    {
+        "product":true,
+        "nombre": "ddl",
+        "imagen": "/images/DDL.jpg",
+        "descripcion": "Dulce de leche La Serenisima.(Orígen Argentina)",
+        "precio": "1000"
+    }
+]
