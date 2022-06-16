@@ -4,15 +4,51 @@
     <body>
         <%-include('../partials/header')%>
         <main class="body-main">
-            <section class="form-crear">
-                <p>CREAR PRODUCTOS</p>
-                <input type="text" name="crearNom " id="nombre" placeholder="nombre del producto">
-                <input type="text" name="crearDesc" id="descripcion" placeholder="descripcion del producto">
-                <input type="text" name="crearCat" id="categoria" placeholder="categoria del producto">
-                <input type="number" name="crearPrec" id="precio" placeholder="valor del producto">
+            <section class="information">
+                <div class="main-information">
+                <h3 class="h3-login">
+                    CREAR PRODUCTOS
+                </h3>
+                <form action="/" method="post">
+                    <div>
+                    <label for="name">Nombre del producto</label>
+                      <input type="text" name="name" id="name">
+                    </div>
+                    <div>  
+                    <label for="description">Descripcion del producto</label>  
+                      <input type="text" name="description" id="description">
+                    </div>
+                    <div>
+                    <label for="category">categoria del producto</label>  
+                      <input type="text" name="category" id="category">
+                    </div>
+                    <div> 
+                    <label for="price">Precio del producto</label>
+                      <input type="text" name="price" id="price">
+                    </div>
+                    <div>  
+                    <label for="origin">Origen del producto</label>  
+                      <input type="text" name="origin" id="origin">
+                    </div>
+                    <div>  
+                    <label for="discount">Descuento del producto</label>  
+                      <input type="text" name="discount" id="discount">
+                    </div>
+                    <div>
+                    <label for="category">Categoria del producto</label>  
+                      <input type="text" name="category" id="category">
+                    </div>
+                    <div> 
+                    <label for="image">Imagen del producto</label>  
+                      <input type="text" name="image" id="image">
+                    </div>
+                </form>
+                
+
                 <div>
                     <button type="submit" class="buttons">Enviar</button>
 
+                </div>
                 </div>
             </section>
             
