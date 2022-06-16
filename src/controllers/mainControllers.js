@@ -15,16 +15,16 @@ const controllers = {
         return res.render("home",{productos:productos});
        
     },
-    login: (req, res) =>{
+    login: (req, res) =>{res.render(path.resolve(__dirname,'../views/users/register'))
 
     },
-    productCart: (req, res) =>{
+    productCart: (req, res) =>{res.render(path.resolve(__dirname,'../views/products/productCart'))
 
     },
-    productDetail: (req, res) =>{
+    productDetail: (req, res) =>{res.render(path.resolve(__dirname,'../views/products/productDetail'))
 
     },
-    register: (req, res) =>{
+    register: (req, res) =>{res.render(path.resolve(__dirname,'../views/users/register'))
 
     }
     

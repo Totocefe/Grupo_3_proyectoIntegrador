@@ -5,7 +5,8 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const mainRouter = require("./router/mainRouter");
-
+const userRouter = require("./router/userRouter");
+const prodRouter = require("./router/prodRouter");
 
 const publicPath= path.resolve(__dirname, '../public');
 
@@ -22,10 +23,10 @@ app.use("/", mainRouter);
 app.get('/',(req,res)=>{res.render(path.resolve(__dirname,'./views/home'))});
 
 
-app.get('/register',(req,res)=>{res.render(path.resolve(__dirname,'./views/users/register'))});
-app.get('/login',(req,res)=>{res.render(path.resolve(__dirname,'./views/users/login'))}); 
-app.get('/productDetail',(req,res)=>{res.render(path.resolve(__dirname,'./views/products/productDetail'))});
-app.get('/productCart',(req,res)=>{res.render(path.resolve(__dirname,'./views/products/productCart'))});
+app.use('/register', userRouter);
+app.use('/login',userRouter); 
+app.use('/productDetail', prodRouter);
+app.use('/productCart',prodRouter);
 app.get('/crearProd',(req,res)=>{res.render(path.resolve(__dirname,'./views/products/crearProd'))});
 app.get('/editarProd',(req,res)=>{res.render(path.resolve(__dirname,'./views/products/editarProd'))});
 
