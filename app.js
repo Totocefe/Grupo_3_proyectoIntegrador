@@ -24,7 +24,7 @@ app.get('/register',(req,res)=>{res.render(path.resolve(__dirname,'./views/regis
 app.get('/login',(req,res)=>{res.render(path.resolve(__dirname,'./views/login'))}); 
 app.get('/productDetail',(req,res)=>{res.render(path.resolve(__dirname,'./views/productDetail'))});
 app.get('/productCart',(req,res)=>{res.render(path.resolve(__dirname,'./views/productCart'))});
-app.get('/crearProd',(req,res)=>{res.render(path.resolve(__dirname,'../views/crearProd'))});
+app.get('/crearProd',(req,res)=>{res.render(path.resolve(__dirname,'./views/crearProd'))});
 app.get('/editarProd',(req,res)=>{res.render(path.resolve(__dirname,'./views/editarProd'))});
 
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head')%>
+    <%-include('../partials/head')%>
     <body>
-        <%-include('./partials/header')%>
+        <%-include('../partials/header')%>
         <main class="body-main">
             <section class="form-editar">
                 <p>EDITAR PRODUCTOS</p>
@@ -10,6 +10,7 @@
                 <input type="text" name="editarDescr" id="descripcion" placeholder="descripcion del producto">
                 <input type="text" name="EditarCateg" id="categoria" placeholder="categoria del producto">
                 <input type="number" name="editarPrecio" id="precio" placeholder="valor del producto">
+                <input type="image">
                 <div>
                     <button type="submit" class="buttons">Enviar</button>
 
@@ -17,5 +18,6 @@
             </section>
             
         </main>
+        <%-include('../partials/footer')%>
     </body>
 </html

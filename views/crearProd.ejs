@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head')%>
+    <%-include('../partials/head')%>
     <body>
-        <%-include('./partials/header')%>
+        <%-include('../partials/header')%>
         <main class="body-main">
             <section class="form-crear">
                 <p>CREAR PRODUCTOS</p>
-                <input type="text" name="crearProd " id="editar" placeholder="nombre del producto">
+                <input type="text" name="crearNom " id="nombre" placeholder="nombre del producto">
                 <input type="text" name="crearDesc" id="descripcion" placeholder="descripcion del producto">
                 <input type="text" name="crearCat" id="categoria" placeholder="categoria del producto">
                 <input type="number" name="crearPrec" id="precio" placeholder="valor del producto">
@@ -17,5 +17,6 @@
             </section>
             
         </main>
+        <%-include('../partials/footer')%>
     </body>
 </html>
