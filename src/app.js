@@ -7,7 +7,7 @@ const app = express();
 const mainRouter = require("./router/mainRouter");
 
 
-const publicPath= path.resolve(__dirname, './public');
+const publicPath= path.resolve(__dirname, '../public');
 
 
 
