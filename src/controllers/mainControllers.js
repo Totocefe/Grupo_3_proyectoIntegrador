@@ -15,7 +15,7 @@ const controllers = {
         return res.render("home",{productos:productos});
        
     },
-    login: (req, res) =>{res.render(path.resolve(__dirname,'../views/users/register'))
+    login: (req, res) =>{res.render(path.resolve(__dirname,'../views/users/login'))
 
     },
     productCart: (req, res) =>{res.render(path.resolve(__dirname,'../views/products/productCart'))
@@ -26,7 +26,16 @@ const controllers = {
     },
     register: (req, res) =>{res.render(path.resolve(__dirname,'../views/users/register'))
 
-    }
+    },
+    create: (req,res)=>{res.render(path.resolve(__dirname,'../views/admin/crearProd'))
+
+    },
+    edit: (req,res)=>{res.render(path.resolve(__dirname,'../views/admin/editarProd'))
+
+    },
+    delete: (req, res) =>{
+
+    },
     
 }
 

@@ -7,6 +7,8 @@ const app = express();
 const mainRouter = require("./router/mainRouter");
 const userRouter = require("./router/userRouter");
 const prodRouter = require("./router/prodRouter");
+const adminRouter = require("./router/adminRouter");
+
 
 const publicPath= path.resolve(__dirname, '../public');
 
@@ -23,12 +25,12 @@ app.use("/", mainRouter);
 app.get('/',(req,res)=>{res.render(path.resolve(__dirname,'./views/home'))});
 
 
-app.use('/register', userRouter);
-app.use('/login',userRouter); 
-app.use('/productDetail', prodRouter);
-app.use('/productCart',prodRouter);
-app.get('/crearProd',(req,res)=>{res.render(path.resolve(__dirname,'./views/products/crearProd'))});
-app.get('/editarProd',(req,res)=>{res.render(path.resolve(__dirname,'./views/products/editarProd'))});
+app.use('/', userRouter);
+app.use('/', userRouter); 
+app.use('/', prodRouter);
+app.use('/', prodRouter);
+app.use('/', adminRouter);
+app.use('/', adminRouter);
 
 
 

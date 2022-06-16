@@ -1,7 +1,6 @@
 [   
     {
         "id" : 1,
-        "product":true,
         "name": "vino",
         "image": "../../images/vino.jpg",
         "description": "Vino tinto Casillero del Diablo.",
@@ -13,7 +12,6 @@
     },
     {
         "id" : 2,
-        "product":true,
         "name": "chocolate",
         "image": "../../images/chocolate.jpg",
         "description": "Chocolate con maní Sublime.",
@@ -24,7 +22,6 @@
     },
     {
         "id" : 3,
-        "product":true,
         "name": "cafe",
         "image": "../../images/cafe.webp",
         "description": "Café juan Valdez.",
@@ -35,7 +32,6 @@
     },
     {
         "id" : 4,
-        "product":true,
         "name": "yerba",
         "image": "../../images/yerba.webp",
         "description": "Yerba mate Canarias",
@@ -46,10 +42,9 @@
     },
     {
         "id" : 5,
-        "product":false,
         "name": "cuzqueña",
         "image": "../../images/cuzqueña.jpg",
-        "description": "Cerveza Cuzqueña.",
+        "description": "Cerveza Cuzqueña Golden Lager.",
         "price": "1000",
         "origin" : "Perú",
         "category": "alcohol",
@@ -57,7 +52,6 @@
     },
     {
         "id" : 6,
-        "product":false,
         "name": "cachaza",
         "image": "../../images/cachaza.jpg",
         "description": "Cachaza Velho Barreiro.",
@@ -68,10 +62,9 @@
     },
     {
         "id" : 7,
-        "product":false,
-        "name": "ddl",
+        "name": "Dulce de leche",
         "image": "../../images/DDL.jpg",
-        "description": "Dulce de leche La Serenisima.",
+        "description": "Dulce de leche tradicional argentino La Serenisima.",
         "price": "1000",
         "origin" : "Argentina",
         "category": "almacen",
@@ -80,10 +73,9 @@
  
     {
         "id" : 8,
-        "product":false,
         "name": "harina",
         "image": "../../images/harina.jpg",
-        "description": "Pan.",
+        "description": "Harina Pan para arepas",
         "price": "1000",
         "origin" : "Venezuela",
         "category": "almacen",
@@ -91,7 +83,6 @@
     },
     {
         "id" : 9,
-        "product":false,
         "name": "pisco",
         "image": "../../images/pisco.jp",
         "description": "Pisco Cuatro Gallos.",
