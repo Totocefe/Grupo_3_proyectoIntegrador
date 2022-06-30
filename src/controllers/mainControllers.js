@@ -30,13 +30,57 @@ const controllers = {
     create: (req,res)=>{res.render(path.resolve(__dirname,'../views/admin/crearProd'))
 
     },
-    edit: (req,res)=>{res.render(path.resolve(__dirname,'../views/admin/editarProd'))
+
+    store:()=>{
+  },
+    edit: (req,res)=>{
+        const id = req.params.id;
+        const productos = read(propath)
+        let producto;
+        productos.forEach(element => {
+          if (element.id == id){
+            producto = element;
+          }  
+        });
+        
+        res.render('../views/admin/editarProd', { producto : producto })
+
+        
+        
+
+   
 
     },
-    delete: (req, res) =>{
+    update: (req,res)=>{
+        const id = req.params.id;
+        const productos = read(propath)
+        let producto;
+       productos.forEach(producto => {
+          if (producto.id == id){
+           
+            producto.name = req.body.name;
+            producto.description = req.body.description;
+            producto.category = req.body.category;
+            producto.price = req.body.price;
+            producto.origin = req.body.origin;
+           producto.discount = req.body.discount;
+           producto.image = req.body.image;
+           fs.writeFileSync(propath, JSON.stringify(productos , null,2)); 
+           return res.redirect('/');
+        } 
+       }); 
+       
+      
 
     },
+   
+  delete: (req, res) =>{
+    const productos = read(propath);
+    const productosFiltrados = productos.filter(producto => producto.id != req.params.id);
+    fs.writeFileSync(propath, JSON.stringify(productosFiltrados,null,2));
+     return res.redirect("/");
     
+}
 }
 
 module.exports = controllers;

@@ -1,95 +1,85 @@
-[   
-    {
-        "id" : 1,
-        "name": "vino",
-        "image": "../../images/vino.jpg",
-        "description": "Vino tinto Casillero del Diablo.",
-        "price": "1000",
-        "origin" : "Chile",
-        "category": "alcohol",
-        "discount": 0
-        
-    },
-    {
-        "id" : 2,
-        "name": "chocolate",
-        "image": "../../images/chocolate.jpg",
-        "description": "Chocolate con maní Sublime.",
-        "price": "1000",
-        "origin" : "Perú",
-        "category": "almacen",
-        "discount": 0
-    },
-    {
-        "id" : 3,
-        "name": "cafe",
-        "image": "../../images/cafe.webp",
-        "description": "Café juan Valdez.",
-        "price": "1000",
-        "origin" : "Colombia",
-        "category": "almacen",
-        "discount": 0
-    },
-    {
-        "id" : 4,
-        "name": "yerba",
-        "image": "../../images/yerba.webp",
-        "description": "Yerba mate Canarias",
-        "price": "1000",
-        "origin" : "uruguay",
-        "category": "almacen",
-        "discount": 0
-    },
-    {
-        "id" : 5,
-        "name": "cuzqueña",
-        "image": "../../images/cuzqueña.jpg",
-        "description": "Cerveza Cuzqueña Golden Lager.",
-        "price": "1000",
-        "origin" : "Perú",
-        "category": "alcohol",
-        "discount": 0
-    },
-    {
-        "id" : 6,
-        "name": "cachaza",
-        "image": "../../images/cachaza.jpg",
-        "description": "Cachaza Velho Barreiro.",
-        "price": "1000",
-        "origin" : "Brasil",
-        "category": "alcohol",
-        "discount": 0
-    },
-    {
-        "id" : 7,
-        "name": "Dulce de leche",
-        "image": "../../images/DDL.jpg",
-        "description": "Dulce de leche tradicional argentino La Serenisima.",
-        "price": "1000",
-        "origin" : "Argentina",
-        "category": "almacen",
-        "discount": 0
-    },
- 
-    {
-        "id" : 8,
-        "name": "harina",
-        "image": "../../images/harina.jpg",
-        "description": "Harina Pan para arepas",
-        "price": "1000",
-        "origin" : "Venezuela",
-        "category": "almacen",
-        "discount": 0
-    },
-    {
-        "id" : 9,
-        "name": "pisco",
-        "image": "../../images/pisco.jp",
-        "description": "Pisco Cuatro Gallos.",
-        "price": "1000",
-        "origin" : "Perú",
-        "category": "alcohol",
-        "discount": 0
-    }
-   
+[
+  {
+    "id": 1
+  },
+  {
+    "id": 2,
+    "name": "chocolate",
+    "image": "../../images/chocolate.jpg",
+    "description": "Chocolate con maní Sublime.",
+    "price": "1000",
+    "origin": "Perú",
+    "category": "almacen",
+    "discount": 0
+  },
+  {
+    "id": 3,
+    "name": "cafe",
+    "image": "../../images/cafe.webp",
+    "description": "Café juan Valdez.",
+    "price": "1000",
+    "origin": "Colombia",
+    "category": "almacen",
+    "discount": 0
+  },
+  {
+    "id": 4,
+    "name": "yerba",
+    "image": "../../images/yerba.webp",
+    "description": "Yerba mate Canarias",
+    "price": "1000",
+    "origin": "uruguay",
+    "category": "almacen",
+    "discount": 0
+  },
+  {
+    "id": 5,
+    "name": "cuzqueña",
+    "image": "../../images/cuzqueña.jpg",
+    "description": "Cerveza Cuzqueña Golden Lager.",
+    "price": "1000",
+    "origin": "Perú",
+    "category": "alcohol",
+    "discount": 0
+  },
+  {
+    "id": 6,
+    "name": "cachaza",
+    "image": "../../images/cachaza.jpg",
+    "description": "Cachaza Velho Barreiro.",
+    "price": "1000",
+    "origin": "Brasil",
+    "category": "alcohol",
+    "discount": 0
+  },
+  {
+    "id": 7,
+    "name": "Dulce de leche",
+    "image": "../../images/DDL.jpg",
+    "description": "Dulce de leche tradicional argentino La Serenisima.",
+    "price": "1000",
+    "origin": "Argentina",
+    "category": "almacen",
+    "discount": 0
+  },
+  {
+    "id": 8,
+    "name": "harina",
+    "image": "../../images/harina.jpg",
+    "description": "Harina Pan para arepas",
+    "price": "1000",
+    "origin": "Venezuela",
+    "category": "almacen",
+    "discount": 0
+  },
+  {
+    "id": 9,
+    "name": "pisco",
+    "image": "../../images/pisco.jp",
+    "description": "Pisco Cuatro Gallos.",
+    "price": "1000",
+    "origin": "Perú",
+    "category": "alcohol",
+    "discount": 0
+  }
 ]

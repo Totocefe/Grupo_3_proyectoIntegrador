@@ -9,46 +9,50 @@
                 <h3 class="h3-login">
                     EDITAR PRODUCTOS
                 </h3>
-                <form action="/" method="post">
+                <form action="/editarProd/<%=producto.id%>?_method=PUT"
+                  method="post" enctype="multipart/form-data">
                     <div>
                     <label for="name">Nombre del producto</label>
-                      <input type="text" name="name" id="name">
+                      <input type="text" name="name" id="name" value="<%=producto.name%>">
                     </div>
                     <div>  
                     <label for="description">Descripcion del producto</label>  
-                      <input type="text" name="description" id="description">
-                    </div>
-                    <div>
-                    <label for="category">categoria del producto</label>  
-                      <input type="text" name="category" id="category">
-                    </div>
-                    <div> 
-                    <label for="price">Precio del producto</label>
-                      <input type="text" name="price" id="price">
-                    </div>
-                    <div>  
-                    <label for="origin">Origen del producto</label>  
-                      <input type="text" name="origin" id="origin">
-                    </div>
-                    <div>  
-                    <label for="discount">Descuento del producto</label>  
-                      <input type="text" name="discount" id="discount">
+                      <textarea name="description" id="description"><%=producto.description %>" </textarea>
                     </div>
                     <div>
                     <label for="category">Categoria del producto</label>  
-                      <input type="text" name="category" id="category">
+                      <input type="text" name="category" id="category"  value="<%=producto.category %>">
                     </div>
                     <div> 
-                    <label for="image">Imagen del producto</label>  
-                      <input type="text" name="image" id="image">
+                    <label for="price">Precio del producto</label>
+                      <input type="text" name="price" id="price"  value="<%=producto.price %>">
                     </div>
+                    <div>  
+                    <label for="origin">Origen del producto</label>  
+                      <input type="text" name="origin" id="origin"  value="<%=producto.origin %>">
+                    </div>
+                    <div>  
+                    <label for="discount">Descuento del producto</label>  
+                      <input type="text" name="discount" id="discount"  value="<%=producto.discount %>">
+                    </div>
+                    
+                    <div> 
+                    <label for="image">Imagen del producto</label>  
+                      <input type="file" name="image" id="image"  value="<%=producto.image %>"/>
+                    </div>
+                    <div>
+                      <button type="submit" class="buttons">Editar</button>
+  
+                  </div>
+                  <div>
+                    <form action="">
+                    <button type="submit" class="buttons">Eliminar producto</button>
+                    </form>  
+                  </div>
                 </form>
                 
 
-                <div>
-                    <button type="submit" class="buttons">Enviar</button>
-
-                </div>
+                
                 </div>
             </section>
             
