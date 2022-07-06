@@ -34,7 +34,22 @@ const controllers = {
 
     },
 
-    store:()=>{
+    store:(req,res)=>{
+      const productos = read(propath)
+		const producto={
+			id:productos[productos.length-1].id+1,
+			name: req.body.name,
+			price: req.body.price,
+      origin: req.body.origin,
+			discount: req.body.discount,
+			category: req.body.category,
+			description:req.body.description,
+			image: req.file?.filename  || "default-image.png",
+      condition: req.body.condition,
+		}
+		productos.push(producto);
+		fs.writeFileSync(propath, JSON.stringify(productos,null,2));
+		return res.redirect("/")
   },
     edit: (req,res)=>{
         const id = req.params.id;
@@ -68,6 +83,7 @@ const controllers = {
             producto.price = req.body.price;
             producto.origin = req.body.origin;
            producto.discount = req.body.discount;
+           producto.condition = req.body.condition;
            
            
         }  

@@ -18,3 +18,4 @@ Estos sitios fueron tomados como referencia debido a su diseño visual y estruct
 
 Link al storyboard https://trello.com/b/CYDTsg6J/proyecto-grupo-3-andina
 Link al storyboard sprint 3 https://trello.com/b/CaSy2XLm/sprint-3
+Link al storyboard sprint 4 https://trello.com/b/PHmcQBAp/sprint-4
