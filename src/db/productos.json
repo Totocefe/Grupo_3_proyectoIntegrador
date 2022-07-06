@@ -1,85 +1,101 @@
 [
   {
-    "id": 1
+    "id": 1,
+    "name": "Vino Tinto",
+    "image": "../../images/products/vino.jpg",
+    "description": "Vino tinto casillero del Diablo  ",
+    "price": "1000",
+    "origin": "Chile",
+    "category": "alcohol",
+    "discount": "0",
+    "condition": "new"
   },
   {
     "id": 2,
     "name": "chocolate",
-    "image": "../../images/chocolate.jpg",
-    "description": "Chocolate con maní Sublime.",
+    "image": "../../images/products/chocolate.jpg",
+    "description": "Chocolate con maní Sublime    ",
     "price": "1000",
     "origin": "Perú",
     "category": "almacen",
-    "discount": 0
+    "discount": "0",
+    "condition": "new"
   },
   {
     "id": 3,
     "name": "cafe",
-    "image": "../../images/cafe.webp",
-    "description": "Café juan Valdez.",
+    "image": "../../images/products/cafe.webp",
+    "description": "Cafe Ramon Valdez",
     "price": "1000",
     "origin": "Colombia",
     "category": "almacen",
-    "discount": 0
+    "discount": 0,
+    "condition": "new"
   },
   {
     "id": 4,
     "name": "yerba",
-    "image": "../../images/yerba.webp",
+    "image": "../../images/products/yerba.webp",
     "description": "Yerba mate Canarias",
     "price": "1000",
     "origin": "uruguay",
     "category": "almacen",
-    "discount": 0
+    "discount": 0,
+    "condition": "new"
   },
   {
     "id": 5,
     "name": "cuzqueña",
-    "image": "../../images/cuzqueña.jpg",
+    "image": "../../images/products/cuzqueña.jpg",
     "description": "Cerveza Cuzqueña Golden Lager.",
     "price": "1000",
     "origin": "Perú",
     "category": "alcohol",
-    "discount": 0
+    "discount": 0,
+    "condition": null
   },
   {
     "id": 6,
     "name": "cachaza",
-    "image": "../../images/cachaza.jpg",
+    "image": "../../images/products/cachaza.jpg",
     "description": "Cachaza Velho Barreiro.",
     "price": "1000",
     "origin": "Brasil",
     "category": "alcohol",
-    "discount": 0
+    "discount": 0,
+    "condition": null
   },
   {
     "id": 7,
     "name": "Dulce de leche",
-    "image": "../../images/DDL.jpg",
+    "image": "../../images/products/DDL.jpg",
     "description": "Dulce de leche tradicional argentino La Serenisima.",
     "price": "1000",
     "origin": "Argentina",
     "category": "almacen",
-    "discount": 0
+    "discount": 0,
+    "condition": null
   },
   {
     "id": 8,
     "name": "harina",
-    "image": "../../images/harina.jpg",
+    "image": "../../images/products/harina.jpg",
     "description": "Harina Pan para arepas",
     "price": "1000",
     "origin": "Venezuela",
     "category": "almacen",
-    "discount": 0
+    "discount": 0,
+    "condition": null
   },
   {
     "id": 9,
     "name": "pisco",
-    "image": "../../images/pisco.jp",
+    "image": "../../images/products/pisco.jpg",
     "description": "Pisco Cuatro Gallos.",
     "price": "1000",
     "origin": "Perú",
     "category": "alcohol",
-    "discount": 0
+    "discount": 0,
+    "condition": null
   }
 ]

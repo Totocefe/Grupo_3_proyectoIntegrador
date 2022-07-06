@@ -21,8 +21,11 @@ const controllers = {
     productCart: (req, res) =>{res.render(path.resolve(__dirname,'../views/products/productCart'))
 
     },
-    productDetail: (req, res) =>{res.render(path.resolve(__dirname,'../views/products/productDetail'))
-
+    productDetail: (req, res) =>{
+            const id = req.params.id;
+            const productos = read(propath);
+            const producto = productos.find(product => product.id == id);
+		       return res.render("../views/products/productDetail", { producto })
     },
     register: (req, res) =>{res.render(path.resolve(__dirname,'../views/users/register'))
 
@@ -52,9 +55,10 @@ const controllers = {
 
     },
     update: (req,res)=>{
+      
         const id = req.params.id;
-        const productos = read(propath)
-        let producto;
+        const productos = read(propath);
+     
        productos.forEach(producto => {
           if (producto.id == id){
            
@@ -64,17 +68,18 @@ const controllers = {
             producto.price = req.body.price;
             producto.origin = req.body.origin;
            producto.discount = req.body.discount;
-           producto.image = req.body.image;
-           fs.writeFileSync(propath, JSON.stringify(productos , null,2)); 
-           return res.redirect('/');
-        } 
+           
+           
+        }  
        }); 
-       
+      
+       fs.writeFileSync(propath, JSON.stringify(productos , null,2)); 
+        return res.redirect('/');
       
 
     },
    
-  delete: (req, res) =>{
+  destroy: (req, res) =>{
     const productos = read(propath);
     const productosFiltrados = productos.filter(producto => producto.id != req.params.id);
     fs.writeFileSync(propath, JSON.stringify(productosFiltrados,null,2));

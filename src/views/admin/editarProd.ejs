@@ -9,7 +9,7 @@
                 <h3 class="h3-login">
                     EDITAR PRODUCTOS
                 </h3>
-                <form action="/editarProd/<%=producto.id%>?_method=PUT"
+                <form action="/admin/editarProd/<%=producto.id%>?_method=PUT"
                   method="post" enctype="multipart/form-data">
                     <div>
                     <label for="name">Nombre del producto</label>
@@ -17,7 +17,7 @@
                     </div>
                     <div>  
                     <label for="description">Descripcion del producto</label>  
-                      <textarea name="description" id="description"><%=producto.description %>" </textarea>
+                      <textarea name="description" id="description"><%=producto.description %> </textarea>
                     </div>
                     <div>
                     <label for="category">Categoria del producto</label>  
@@ -40,15 +40,17 @@
                     <label for="image">Imagen del producto</label>  
                       <input type="file" name="image" id="image"  value="<%=producto.image %>"/>
                     </div>
+                    
                     <div>
-                      <button type="submit" class="buttons">Editar</button>
+                      <button type="submit" class="buttons" style="background-color: rgb(99, 153, 99); color: white; ">Guardar</button>
   
                   </div>
-                  <div>
+                
+                  <!--div>
                     <form action="">
                     <button type="submit" class="buttons">Eliminar producto</button>
                     </form>  
-                  </div>
+                  </div-->
                 </form>
                 
 

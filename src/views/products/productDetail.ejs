@@ -9,15 +9,26 @@
             <div class="second-container">
                 <article class="article-selected">
                     <div class="article-image" >
-                        <img src="/images/products/cuzqueña.jpg" alt="cuzqueña">
+                        <img src="/images/products/<%= producto.image %>" alt="Imagen">
                        
                     </div>
                     <div class="article-description">
-                        <p class="description">6 pack cerveza "Cuzqueña" Golden Lager (Orígen Perú)</p>
-                        <p class="price">$1800 (10% OFF SI ESTAS REGISTRADO)</p>
+                        <p class="description"><%= producto.description %> (Orígen <%= producto.origin %>)</p>
+                        <p class="price">$<%= producto.price %> (10% OFF SI ESTAS REGISTRADO)</p>
                         <p class="add-cart"><a href="#">Agregar al carrito</a></p>
                        
                     </div>
+                    
+                        <a href="/admin/editarProd/<%= producto.id %>">
+                       <button type="submit" style="background-color: rgb(99, 153, 99); color: white; ">Editar Producto</button>
+                       </a>
+                        
+                    
+                    
+                        <form action="/admin/<%= producto.id %>?_method=DELETE" method="post">
+                           <button type="submit" style="background-color: rgb(99, 153, 99); color: white; ">Eliminar Producto</button>
+                        </form>
+                    
                 </article>
             </div>
             

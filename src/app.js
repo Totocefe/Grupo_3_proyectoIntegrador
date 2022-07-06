@@ -25,15 +25,13 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/", mainRouter);
 
-app.get('/',(req,res)=>{res.render(path.resolve(__dirname,'./views/home'))});
-
 
 app.use('/user', userRouter);
-app.use('/', userRouter); 
+//app.use('/', userRouter); 
 app.use('/product', prodRouter);
-app.use('/', prodRouter);
+//app.use('/', prodRouter);
 app.use('/admin', adminRouter);
-app.use('/', adminRouter);
+//app.use('/', adminRouter);
 
 
 

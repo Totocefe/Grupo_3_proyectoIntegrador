@@ -6,7 +6,7 @@
 
     <main class="body-main">
         <div class="new-arrivals"><h4>NOVEDADES</h4></div>
-        <div class="novedades">
+       
             
              <!--<% for (let i = 0; i < productos.length; i++ ) { %>
                 <% if(productos[i].product == true){ %>
@@ -32,44 +32,54 @@
                 <% } %>
             
         </div>-->
-       
+        
+
+        <div class="novedades">
+            <%for(let i = 0; i< productos.length; i++){ %>
+                <% if( productos[i].condition == "new"){ %>
            <article class="vino">
-                <a href="#"><img src="/images/products/vino.jpg" alt="vino"></a>
+                <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="vino"></a>
                 <img class="new" src="/images/new-icon-1497910_1280.webp" alt="">
-                <p>Vino tinto Casillero del Diablo. (Orígen Chile)</p>
+                <p><%= productos[i].description %> (Orígen <%= productos[i].origin %>)</p>
             </article>
 
-            </article>
+            <!--</article>
             <article class="chocolate">
-                <a href="#"><img src="/images/products/chocolate.jpg" alt="chocolate"></a>
+                <a href="/product/productDetail"><img src="/images/products/chocolate.jpg" alt="chocolate"></a>
                 <img class="new" src="/images/new-icon-1497910_1280.webp" alt="">
                 <p>Chocolate con maní Sublime. (Orígen Perú)</p>
             </article>
             <article class="cafe">
-                <a href="#"><img src="/images/products/cafe.webp" alt="cafe"></a>
-                <img class="new" src="/images/new-icon-1497910_1280.webp" alt="">
-                <p>Café Ramón Valdez. (Orígen Colombia)</p>
+                <a href="/product/productDetail"new" src="/images/new-icon-1497910_1280.webp" alt="">
+                <p>Café Ramó#"><img src="/images/products/cafe.webp" alt="cafe"></a>
+                <img classn Valdez. (Orígen Colombia)</p>
             </article>
-            <article class="yerba"><a href="#"><img src="/images/products/yerba.webp" alt="yerba"></a>
+            <article class="yerba"><a href="/product/productDetail"><img src="/images/products/yerba.webp" alt="yerba"></a>
                 <img class="new" src="/images/new-icon-1497910_1280.webp" alt="">
                 <p>Yerba mate Canarias. 
                     (Orígen Uruguay)</p>
-            </article> 
+            </article> -->
+            <% } %>
+			<% } %>
         </div>
+        
 
         <section class="products">
+            <%for(let i = 0; i< productos.length; i++){ %>
+                <% if( productos[i].condition == null){ %>
     
             <article class="cuzqueña">
-                <a href="/productDetail"><img src="/images/products/cuzqueña.jpg" alt="cuzqueña"></a>
+                <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="cuzqueña"></a>
                 <div class="bottom-article">
-                 <p>Cerveza Cuzqueña.(Orígen Perú)</p>
+                 <p><%= productos[i].description %>(Orígen <%= productos[i].origin %>)</p>
                  <img class="onsale" src="/images/onsale.jpg" alt="on sale">
                </div>
             </article>
+            <% } %>
+			<% } %>
         
-        
-            <article class="cachaza">
-                <a href="#"><img src="/images/products/cachaza.jpg" alt="cachaza"></a>
+            <!--<article class="cachaza">
+                <a href="/product/productDetail"><img src="/images/products/cachaza.jpg" alt="cachaza"></a>
                <div class="bottom-article">
                  <p>Cachaza Velho Barreiro.(Orígen Brasil)</p>
                  <img class="onsale" src="/images/product/onsale.jpg" alt="on sale">
@@ -78,7 +88,7 @@
         
         
             <article class="ddl">
-                <a href="#"><img src="/images/products/DDL.jpg" alt="DDL"></a>
+                <a href="/product/productDetail"><img src="/images/products/DDL.jpg" alt="DDL"></a>
                 <div class="bottom-article">
                  <p>Dulce de leche La Serenisima.(Orígen Argentina) </p>
                  <img class="onsale" src="/images/onsale.jpg" alt="on sale">
@@ -87,7 +97,7 @@
         
         
             <article class="harina">
-                <a href="#"><img src="/images/products/harina.jpg" alt="harina"></a>
+                <a href="/product/productDetail"><img src="/images/products/harina.jpg" alt="harina"></a>
                 <div class="bottom-article">
                  <p>Harina Pan.(Orígen Venezuela)</p>
                  <img class="onsale" src="/images/onsale.jpg" alt="on sale">
@@ -96,12 +106,12 @@
         
         
             <article class="pisco">
-                <a href="#"><img src="/images/products/pisco.jpg" alt="pisco"></a>
+                <a href="/product/productDetail"><img src="/images/products/pisco.jpg" alt="pisco"></a>
                 <div class="bottom-article">
                  <p>Pisco Cuatro Gallos.(Orígen Perú)</p>
                  <img class="onsale" src="/images/onsale.jpg" alt="on sale">
                 </div>
-            </article>            
+            </article> -->           
         </section>
     </main>
     <%-include('./partials/footer')%>
