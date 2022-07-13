@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
+
 const mainRouter = require("./router/mainRouter");
 const userRouter = require("./router/userRouter");
 const prodRouter = require("./router/prodRouter");

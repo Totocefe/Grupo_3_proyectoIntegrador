@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Vino Tinto",
     "image": "../../images/products/vino.jpg",
-    "description": "Vino tinto casillero del Diablo  ",
-    "price": "1000",
+    "description": "Vino tinto casillero del Diablo    ",
+    "price": "100",
     "origin": "Chile",
     "category": "alcohol",
     "discount": "0",
@@ -47,12 +47,12 @@
     "id": 5,
     "name": "cuzqueña",
     "image": "../../images/products/cuzqueña.jpg",
-    "description": "Cerveza Cuzqueña Golden Lager.",
-    "price": "1000",
+    "description": "Cerveza Cuzqueña Golden Lager. ",
+    "price": "10",
     "origin": "Perú",
     "category": "alcohol",
-    "discount": 0,
-    "condition": null
+    "discount": "0",
+    "condition": "0"
   },
   {
     "id": 6,

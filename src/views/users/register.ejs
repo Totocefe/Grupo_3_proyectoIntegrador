@@ -8,17 +8,17 @@
             <section class="information">
                 <div class="main-information">
                     
-                    <form action="/" method="get">
+                    <form action="/user/register" method="post" enctype="multipart/form-data">
                        <h3 class="h3-login">
                            Registrate
                        </h3>
                        <div>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre">
+                        <label for="firstName">Nombre:</label>
+                        <input type="text" name="firstName">
                         </div>
                         <div>
-                            <label for="apellido">Apellido:</label>
-                            <input type="text" name="apellido">
+                            <label for="lastName">Apellido:</label>
+                            <input type="text" name="lastName">
                             </div>
                        
                         <div>
@@ -29,10 +29,11 @@
                             <label for="password">Contraseña</label>
                             <input type="text" name="password" >
                         </div>
-                        <div>
-                            <label for="confirmar-contraseña">Confirmar contraseña:</label>
-                            <input type="text" name="confirmar-contraseña">
-                            </div>
+                        
+                        <div> 
+                            <label for="userImage">Imagen del producto</label>  
+                              <input type="file" name="userImage" id="image">
+                        </div>
                        
                        
                         

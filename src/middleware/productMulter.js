@@ -10,5 +10,5 @@ const storage = multer.diskStorage({
         cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname))    
     }
 })
-const upload = multer({storage:storage});
-module.exports = upload;
+const productMulter = multer({storage:storage});
+module.exports = productMulter;

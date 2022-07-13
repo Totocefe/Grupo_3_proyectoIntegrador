@@ -1,12 +1,20 @@
 [
-    {
-        "id":"",
-        "firstName":"",
-        "lastName":"",
-        "email":"",
-        "password":"", 
-        "category":"",
-        "image":""
-
-    }
+  {
+    "id": 0,
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "password": "",
+    "confirmPassword": "",
+    "image": ""
+  },
+  
+  {
+    "id": 2,
+    "firstName": "Tomas",
+    "lastName": "Amadeo",
+    "email": "totocefe@hotmail.com",
+    "password": "$2a$12$vTDNrseprw/3kPDk00jEFu9c4C8qjo6ayisETsnmOGJs.5urW4UlO",
+    "image": "default-image.png"
+  }
 ]
