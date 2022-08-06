@@ -1,0 +1,10 @@
+//notas para Tomas y Angela: obtuve código de sitio: https://dev.to/nedsoft/getting-started-with-sequelize-and-postgres-emp
+// siguiendo indicaciones de video playground: CRUD de la clase 33, minuto 4.
+const path = require('path')
+
+module.exports = {
+  config: path.resolve('./database/config', 'config.js'),
+  'models-path': path.resolve('./database/models'),
+  'seeders-path': path.resolve('./database/seeders'),
+  'migrations-path': path.resolve('./database/migrations'),
+}
