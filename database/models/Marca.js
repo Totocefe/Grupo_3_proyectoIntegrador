@@ -4,7 +4,7 @@ module.exports = function(sequelize, dataTypes){
     let cols= {
         id: {
             type: dataTypes.INTEGER,
-            primarykey: true,
+            primaryKey: true,
             autoIncrement: true
         },
         first_name:{
@@ -23,7 +23,13 @@ module.exports = function(sequelize, dataTypes){
 
     let Marca= sequelize.define(alias, cols, config);
 
-    
+    Marca.associate= function(models){
+        Marca.hasMany(models.Producto,{
+            //oneToMany: hasMany... una marca tiene muchos productos
+            as: "productos", //forma en que llamamos esa relacion.. de la marca pediré los muchos productos que tiene 
+            foreignKey: "brand_id"
+          });
+    }    
     return Marca;
 }
 
