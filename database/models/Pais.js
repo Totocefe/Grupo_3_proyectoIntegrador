@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes){
-    let alias= "Marca";
+    let alias= "Pais";
 
     let cols= {
         id: {
@@ -9,21 +9,16 @@ module.exports = function(sequelize, dataTypes){
         },
         first_name:{
             type: dataTypes.STRING 
-        },
-
-        country_id:{
-            type:dataTypes.INTEGER
         }
-
     }
     let config= {
-        tableName:"brands", 
+        tableName:"country", 
         timestamps: false
     }
 
-    let Marca= sequelize.define(alias, cols, config);
+    let Pais= sequelize.define(alias, cols, config);
 
     
-    return Marca;
+    return Pais;
 }
 

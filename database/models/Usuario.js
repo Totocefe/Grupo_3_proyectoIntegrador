@@ -18,8 +18,18 @@ module.exports = function(sequelize, dataTypes){
         }
         password:{
             type: dataTypes.STRING
+        }, 
+        age:{
+            type: dataTypes.INTEGER
+        }, 
+        country_id:{
+            type:dataTypes.INTEGER
         }
 
+    }
+    let config= {
+        tableName:"users", 
+        timestamps: false
     }
 
     let Usuario= sequelize.define(alias, cols, config);
