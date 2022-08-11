@@ -7,18 +7,20 @@
         <section class="information">
             <div class="main-information">
                 
-                <form action="/" method="post">
+                <form action="/" method="">
                    <h3 class="h3-login">
                        Ingresá con tu cuenta
                    </h3>
                    
                     <div>
                     <label for="email">Email:</label>
-                    <input type="text" name="email">
+                    <input type="email" name="email">
+                    <!--<p style="color: red"><%= typeof errors != "undefined" && errors.email ? errors.email.msg : null %></p>-->
                     </div>
                     <div>
                         <label for="password">Contraseña</label>
                         <input type="text" name="password" >
+                        <!--<p style="color: red"><%= typeof errors != "undefined" && errors.password ? errors.password.msg : null %></p>-->
                     </div>
                     <div class="forgot">
                         <p><a href="#">Olvidaste tu contraseña?</a></p>

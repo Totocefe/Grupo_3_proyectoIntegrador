@@ -8,13 +8,36 @@
     "confirmPassword": "",
     "image": ""
   },
-  
   {
     "id": 2,
     "firstName": "Tomas",
     "lastName": "Amadeo",
     "email": "totocefe@hotmail.com",
     "password": "$2a$12$vTDNrseprw/3kPDk00jEFu9c4C8qjo6ayisETsnmOGJs.5urW4UlO",
+    "image": "default-image.png"
+  },
+  {
+    "id": 3,
+    "firstName": "Tomas",
+    "lastName": "Amadeo",
+    "email": "totocefe@hotmail.com",
+    "password": "$2a$12$qFXaXdQaC5JF2Aavj7DfeurlfBOpJYSg6IavW.ZITt4jljXARKAJ.",
+    "image": "default-image.png"
+  },
+  {
+    "id": 4,
+    "firstName": "Tomas",
+    "lastName": "Amadeo",
+    "email": "kklk@kllk.com",
+    "password": "$2a$12$p45STZ52qNBQzWYDc2goL.l6nJVNPvb6DCjP5lohzBlY2j0c/zj42",
+    "image": "default-image.png"
+  },
+  {
+    "id": 5,
+    "firstName": "Tomas",
+    "lastName": "Amadeo",
+    "email": "llambid@gmail.com",
+    "password": "$2a$12$FpzhrP.tT9WbtupKuha20erRBbETE.lCpFGVOwgw/WSQKveX8HNyW",
     "image": "default-image.png"
   }
 ]

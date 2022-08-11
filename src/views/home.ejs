@@ -8,31 +8,7 @@
         <div class="new-arrivals"><h4>NOVEDADES</h4></div>
        
             
-             <!--<% for (let i = 0; i < productos.length; i++ ) { %>
-                <% if(productos[i].product == true){ %>
-                    <img src="<%= productos[i].imagen %>">
-                    <img  src="/images/new-icon-1497910_1280.webp" alt="" >
-                    <h4><%= productos[i].nombre%></h4>
-                    <p><%= productos[i].descripcion%></p>
-                    <p><%= productos[i].precio%></p>
-                    <br>
-                <% } %>                
-            <% } %>
-        </div>
-        <div class="productos"><h4>PRODUCTOS</h4></div>
-        <div class="PRODUCTOS">
-                <% for (let i = 0; i < productos.length; i++ ) { %>
-                    <% if(productos[i].product == false){ %>
-                        <img src="<%= productos[i].imagen %>">
-                        <h4><%= productos[i].nombre%></h4>
-                        <p><%= productos[i].descripcion%></p>
-                        <p><%= productos[i].precio%></p>
-                        <br>
-                    <% } %>
-                <% } %>
-            
-        </div>-->
-        
+             
 
         <div class="novedades">
             <%for(let i = 0; i< productos.length; i++){ %>
@@ -40,25 +16,10 @@
            <article class="vino">
                 <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="vino"></a>
                 <img class="new" src="/images/mainImages/new-icon-1497910_1280.webp" alt="">
-                <p><%= productos[i].description %> (Orígen <%= productos[i].origin %>)</p>
+                <p><%= productos[i].description %> (Orígen <%= productos[i].country %>)</p>
             </article>
 
-            <!--</article>
-            <article class="chocolate">
-                <a href="/product/productDetail"><img src="/images/products/chocolate.jpg" alt="chocolate"></a>
-                <img class="new" src="/images/new-icon-1497910_1280.webp" alt="">
-                <p>Chocolate con maní Sublime. (Orígen Perú)</p>
-            </article>
-            <article class="cafe">
-                <a href="/product/productDetail"new" src="/images/new-icon-1497910_1280.webp" alt="">
-                <p>Café Ramó#"><img src="/images/products/cafe.webp" alt="cafe"></a>
-                <img classn Valdez. (Orígen Colombia)</p>
-            </article>
-            <article class="yerba"><a href="/product/productDetail"><img src="/images/products/yerba.webp" alt="yerba"></a>
-                <img class="new" src="/images/new-icon-1497910_1280.webp" alt="">
-                <p>Yerba mate Canarias. 
-                    (Orígen Uruguay)</p>
-            </article> -->
+            
             <% } %>
 			<% } %>
         </div>
@@ -71,7 +32,7 @@
             <article class="cuzqueña">
                 <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="cuzqueña"></a>
                 <div class="bottom-article">
-                 <p><%= productos[i].description %>(Orígen <%= productos[i].origin %>)</p>
+                 <p><%= productos[i].description %>(Orígen <%= productos[i].country %>)</p>
                  <img class="onsale" src="/images/onsale.jpg" alt="on sale">
                </div>
             </article>

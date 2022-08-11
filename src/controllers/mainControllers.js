@@ -5,7 +5,8 @@ const propath = path.join(__dirname, "../db/productos.json");
 // esta es la ruta a la base de datos de usuarios guardada en una variable utilizando el metodo join de path
 const userPath = path.join(__dirname, "../db/users.json");
 // aca requiero a la funcion validation result para poder hacer efectivas las validaciones del router
-const {validationResult} = require('express-validator');
+const {validationResult} = require("express-validator");
+
 //aca requiero bcrypt para poder usar su metodo .hashsync y poder encriptar la contraseña
 const bcrypt = require("bcryptjs");
 // esta es la funcion en la cual obtengo un archivo json parseado
@@ -29,6 +30,16 @@ const controllers = {
 
     },
 
+   // processLogin:(req,res)=>{
+     // const errors = validationResult(req);
+      //if(!errors.isEmpty()){
+        //return res.render("home",{errors:errors.mapped(), old: req.body});
+      //}else {
+        //return res.render("home", { user: req.body});
+      //}
+
+    //},
+
     //esto lleva al carrito de compras
     productCart: (req, res) =>{res.render(path.resolve(__dirname,'../views/products/productCart'))
 
@@ -51,6 +62,7 @@ const controllers = {
     //esto  almacena en la base de datos al usuario registrado
 
     userStore: (req,res) =>{
+      
       const usuarios = read(userPath)
       const newUser={
         id:usuarios[usuarios.length-1].id+1,
@@ -63,7 +75,8 @@ const controllers = {
       }
       usuarios.push(newUser);
       fs.writeFileSync(userPath, JSON.stringify(usuarios,null,2));
-      return res.redirect("/")
+      return res.redirect("login")
+
     },
 
     //esto lleva al formulario de creacion de un producto
@@ -80,7 +93,7 @@ const controllers = {
 			id:productos[productos.length-1].id+1,
 			name: req.body.name,
 			price: req.body.price,
-      origin: req.body.origin,
+      country: req.body.country,
 			discount: req.body.discount,
 			category: req.body.category,
 			description:req.body.description,
@@ -121,7 +134,7 @@ const controllers = {
             producto.description = req.body.description;
             producto.category = req.body.category;
             producto.price = req.body.price;
-            producto.origin = req.body.origin;
+            producto.country = req.body.country;
            producto.discount = req.body.discount;
            producto.condition = req.body.condition;
            
