@@ -58,7 +58,7 @@ const controllers = {
         lastName: req.body.lastName,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 12),
-        image: req.file?.filename  || "default-image.png"
+        image: req.file.filename  || "default-image.png"
         
       }
       usuarios.push(newUser);
@@ -84,7 +84,7 @@ const controllers = {
 			discount: req.body.discount,
 			category: req.body.category,
 			description:req.body.description,
-			image: req.file?.filename  || "default-image.png",
+			image: req.file.filename  || "default-image.png",
       condition: req.body.condition,
 		}
 		productos.push(producto);
