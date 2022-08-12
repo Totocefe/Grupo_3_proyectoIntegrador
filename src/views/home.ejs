@@ -12,11 +12,11 @@
 
         <div class="novedades">
             <%for(let i = 0; i< productos.length; i++){ %>
-                <% if( productos[i].condition == "new"){ %>
+                <% if( productos[i].condicion == "new"){ %>
            <article class="vino">
-                <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="vino"></a>
+                <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="Imagen"></a>
                 <img class="new" src="/images/mainImages/new-icon-1497910_1280.webp" alt="">
-                <p><%= productos[i].description %> (Orígen <%= productos[i].country %>)</p>
+                <p><%= productos[i].description %> (Orígen <%= productos[i].country_id %>)</p>
             </article>
 
             
@@ -27,12 +27,12 @@
 
         <section class="products">
             <%for(let i = 0; i< productos.length; i++){ %>
-                <% if( productos[i].condition != "new"){ %>
+                <% if( productos[i].condicion != "new"){ %>
     
             <article class="cuzqueña">
-                <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="cuzqueña"></a>
+                <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="Imagen"></a>
                 <div class="bottom-article">
-                 <p><%= productos[i].description %>(Orígen <%= productos[i].country %>)</p>
+                 <p><%= productos[i].description %>(Orígen <%= productos[i].country_id %>)</p>
                  <img class="onsale" src="/images/onsale.jpg" alt="on sale">
                </div>
             </article>

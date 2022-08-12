@@ -3,11 +3,11 @@ module.exports = function(sequelize, dataTypes){
 
     let cols= {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
-        first_name:{
+        name:{
             type: dataTypes.STRING 
         }
     }

@@ -6,7 +6,7 @@ const propath = path.join(__dirname, "../db/productos.json");
 const userPath = path.join(__dirname, "../db/users.json");
 // aca requiero a la funcion validation result para poder hacer efectivas las validaciones del router
 const {validationResult} = require("express-validator");
-
+const db = require('../../database/models')
 //aca requiero bcrypt para poder usar su metodo .hashsync y poder encriptar la contraseña
 const bcrypt = require("bcryptjs");
 // esta es la funcion en la cual obtengo un archivo json parseado
@@ -20,9 +20,10 @@ const controllers = {
 
   // esto lleva al home junto con la lista de productos
     home: (req, res) => {
-        const productos = read(propath);
+        db.Producto.findAll()
+        .then(function(productos){
         return res.render("home",{productos:productos});
-       
+        });
     },
 
     // esto lleva al login del usuario
@@ -47,10 +48,14 @@ const controllers = {
 
     // esto lleva a la pagina del detalle del producto segun el id que llega por parametro en la url
     productDetail: (req, res) =>{
-            const id = req.params.id;
-            const productos = read(propath);
-            const producto = productos.find(product => product.id == id);
-		       return res.render("../views/products/productDetail", { producto })
+           //const id = req.params.id;
+            //const productos = read(propath);
+            //const producto = productos.find(product => product.id == id);
+		       //return res.render("../views/products/productDetail", { producto })
+           db.Producto.findByPk(req.params.id)
+              .then(function(producto){
+                return res.render("../views/products/productDetail", { producto })
+              })
     },
 
     // esto lleva a la pagina de registracion del usuario
@@ -88,20 +93,20 @@ const controllers = {
     // esto almacena el producto creado segun lo ingresado en el body del formulario
 
     store:(req,res)=>{
-      const productos = read(propath)
-		const producto={
-			id:productos[productos.length-1].id+1,
-			name: req.body.name,
+      db.Producto.create({
+        name: req.body.name,
 			price: req.body.price,
-      country: req.body.country,
+      country_id: req.body.country,
 			discount: req.body.discount,
-			category: req.body.category,
+			categorie: req.body.categorie,
 			description:req.body.description,
-			image: req.file.filename  || "default-image.png",
-      condition: req.body.condition,
-		}
-		productos.push(producto);
-		fs.writeFileSync(propath, JSON.stringify(productos,null,2));
+			//image: req.file.filename  || "default-image.png",
+      condicion: req.body.condicion
+      });
+		
+			
+		
+		
 		return res.redirect("/")
   },
 
@@ -150,10 +155,16 @@ const controllers = {
    
     // esto elimina un producto de la base de datos, la logica es sobre-escribir la base de datos sin el producto q tenga por id el mismo id q llega por url
   destroy: (req, res) =>{
-    const productos = read(propath);
-    const productosFiltrados = productos.filter(producto => producto.id != req.params.id);
-    fs.writeFileSync(propath, JSON.stringify(productosFiltrados,null,2));
-     return res.redirect("/");
+    //const productos = read(propath);
+    //const productosFiltrados = productos.filter(producto => producto.id != req.params.id);
+    //fs.writeFileSync(propath, JSON.stringify(productosFiltrados,null,2));
+     //return res.redirect("/");
+     db.Producto.destroy({
+      where:{id:req.params.id}
+     })
+     
+     return res.redirect("/")
+     
     
 }
 }
