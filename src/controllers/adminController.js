@@ -85,7 +85,7 @@ const read = ( path ) => {
              discount: req.body.discount,
              categorie: req.body.categorie,
              description:req.body.description,
-             image: req.file.filename  || "default-image.png",
+             //image: req.file.filename  || "default-image.png",
        condicion: req.body.condicion
             },
             {

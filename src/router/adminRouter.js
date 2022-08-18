@@ -5,7 +5,7 @@ const productMulter = require('../middleware/productMulter')
 
 router.get("/crearProd", adminController.create);
 //aca pongo el multer .single es por q subo un solo archivo y entre () va el name del input de la vista
-router.post("/",productMulter.single('image'), adminController.store);
+router.post("/store",productMulter.single('image'), adminController.store);
 
 router.get("/editarProd/:id", adminController.edit);
 router.put("/editarProd/:id", productMulter.single('image'), adminController.update )

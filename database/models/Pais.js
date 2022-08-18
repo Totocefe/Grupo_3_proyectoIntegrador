@@ -21,14 +21,14 @@ module.exports = function(sequelize, dataTypes){
     Pais.associate= function(models){
         Pais.hasMany(models.Producto,{
             //oneToMany: hasMany... un pais tiene muchos productos
-            as: "pais_producto", //forma en que llamamos esa relacion.. del pais pediré los muchos productos que tiene 
+            as: "productos", //forma en que llamamos esa relacion.. del pais pediré los muchos productos que tiene 
             foreignKey: "country_id"
           });
 
     //relacion one-to-many de pais-marcas:    
         Pais.hasMany(models.Marca,{
             //oneToMany: hasMany... un pais tiene muchas marcas
-            as: "pais_marca", //forma en que llamamos esa relacion.. del pais pediré las muchas marcas que tiene 
+            as: "marcas", //forma en que llamamos esa relacion.. del pais pediré las muchas marcas que tiene 
             foreignKey: "country_id"
           });
     } 

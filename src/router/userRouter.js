@@ -11,7 +11,8 @@ router.get("/register", userController.register);
 router.post("/register",userMulter.single('userImage'), registerValidation ,
 userController.userStore);
 
+router.get("/profile", userController.profile);
 
 router.get("/login", userController.login);
-//router.post("/login", mainControllers.processLogin);
+router.post("/login",loginValidation, userController.processLogin);
 module.exports = router;

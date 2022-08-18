@@ -21,11 +21,26 @@ const read = ( path ) => {
     const datosparsed = JSON.parse(datos);
     return datosparsed;}
 
+
+
     const userController = {
         // esto lleva al login del usuario
     login: (req, res) =>{res.render(path.resolve(__dirname,'../views/users/login'))
 
     },
+     
+    processLogin: (req,res)=>{
+
+        const validaciones = validationResult(req);
+          
+        if (validaciones.errors.length > 0){
+          
+          return res.render('users/login',{ validaciones: validaciones.mapped(), old: req.body}); // el metodo mapped pasa el array validaciones a un objeto literal
+        }else{
+            return res.redirect('/user/profile')
+        }
+    },
+
     // esto lleva a la pagina de registracion del usuario
     
     register: (req, res) =>{res.render(path.resolve(__dirname,'../views/users/register'))
@@ -44,10 +59,13 @@ const read = ( path ) => {
           //email: req.body.email,
           //password: bcrypt.hashSync(req.body.password, 12),
           //image: req.file.filename  || "default-image.png"
+
+          
           const validaciones = validationResult(req);
           
-          if (validaciones.length > 0){
-            return res.render("register",{ validaciones: validaciones.mapped(), old: req.body}); // el metodo mapped pasa el array validaciones a un objeto literal
+          if (validaciones.errors.length > 0){
+            
+            return res.render("users/register",{ validaciones: validaciones.mapped(), old: req.body}); // el metodo mapped pasa el array validaciones a un objeto literal
           }
 
 
@@ -67,6 +85,7 @@ const read = ( path ) => {
         //usuarios.push(newUser);
         //fs.writeFileSync(userPath, JSON.stringify(usuarios,null,2));
         //return res.redirect("login")
+        profile: (req,res) =>{res.render(path.resolve(__dirname,'../views/users/profile'))},
   
         }
 

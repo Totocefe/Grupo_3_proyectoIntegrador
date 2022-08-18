@@ -48,11 +48,13 @@ const read = ( path ) => {
 
 search:(req,res)=>{
     db.Producto.findOne({
-      where:{name:{[Op.like]:'%'+ req.body.name + '%'}}
+      where:{name:{[Op.like]:'%'+ req.body.buscador + '%'}} // "buscador" es el name del input del form del search
     }) 
     .then(function(producto){
+        
+       
       return res.render("../views/products/productDetail",{ producto })
-    })
+})
 }
     }
     module.exports = productController;

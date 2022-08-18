@@ -26,7 +26,12 @@ const mainController = {
 
   // esto lleva al home junto con la lista de productos
     home: (req, res) => {
-        db.Producto.findAll()
+        db.Producto.findAll({
+          include:[{
+            association:'paises'
+          }
+          ]
+      })
         .then(function(productos){
         return res.render("home",{productos:productos});
         });

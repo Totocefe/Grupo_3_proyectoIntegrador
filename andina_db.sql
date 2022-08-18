@@ -68,9 +68,9 @@ CREATE TABLE `products` (
   `description` varchar(200) DEFAULT NULL,
   `price` int(10) UNSIGNED DEFAULT NULL,
   `country_id` int(10) UNSIGNED DEFAULT NULL,
-  `category` varchar(200) DEFAULT NULL,
+  `categorie` varchar(200) DEFAULT NULL,
   `discount` decimal(10,0) DEFAULT NULL,
-  `condition` varchar(200) DEFAULT NULL,
+  `condicion` varchar(200) DEFAULT NULL,
   `brand_id` int(10) UNSIGNED DEFAULT NULL,
   `image` int(11) DEFAULT NULL,
   `users_id` int(10) UNSIGNED NOT NULL

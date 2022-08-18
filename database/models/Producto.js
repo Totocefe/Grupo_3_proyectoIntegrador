@@ -17,7 +17,7 @@ module.exports = function(sequelize, dataTypes){
              type: dataTypes.DECIMAL.UNSIGNED
         },
         country_id:{
-            type: dataTypes.INTEGER.UNSIGNED
+            type: dataTypes.STRING
         }, 
         categorie:{
             type: dataTypes.STRING
@@ -29,10 +29,10 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.STRING
         },
         brand_id:{
-            type: dataTypes.INTEGER.UNSIGNED
+            type: dataTypes.STRING
         },
         image:{
-            type: dataTypes.INTEGER
+            type: dataTypes.STRING
         }
 
     }
@@ -56,9 +56,14 @@ module.exports = function(sequelize, dataTypes){
         });
         
         Producto.belongsTo(models.Marca,{ //un producto tiene una marca rel onetomany
-            as: "marca_producto",
+            as: "marcas",
             foreignKey:"brand_id"
         });
+
+        Producto.belongsTo(models.Pais,{
+            as:"paises",
+            foreignKey:"country_id"
+        })
     }
     
     return Producto;
