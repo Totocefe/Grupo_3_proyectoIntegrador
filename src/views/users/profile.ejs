@@ -8,11 +8,11 @@
             <div class="main-information">
                 <div>
                     <img src="/images/products/default-image.png" alt="">
-                    <p>bienvenido nombre y apellido</p>
+                    <p>Hola <%= usuario.first_name %> !!</p>
                     <a href="/">
                         <button type="submit" style="background-color: rgb(99, 153, 99); color: white;" ;>Ir a la Pagina Pincipal</button>
                     </a>
-                     <a href="./register">
+                     <a href="./editUser/<%= usuario.id %>">
                          <button type="submit" style="background-color: rgb(99, 153, 99); color: white; ">Editar perfil</button>
                      </a>
                      <form action="" method="post">

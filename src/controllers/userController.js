@@ -25,7 +25,12 @@ const read = ( path ) => {
 
     const userController = {
         // esto lleva al login del usuario
-    login: (req, res) =>{res.render(path.resolve(__dirname,'../views/users/login'))
+    login: (req, res) =>{
+      db.Usuario.findAll()
+      .then(function(usuario){
+        return res.render('../views/users/login', {usuario})
+      })
+      
 
     },
      
@@ -37,6 +42,7 @@ const read = ( path ) => {
           
           return res.render('users/login',{ validaciones: validaciones.mapped(), old: req.body}); // el metodo mapped pasa el array validaciones a un objeto literal
         }else{
+          
             return res.redirect('/user/profile')
         }
     },
@@ -85,8 +91,47 @@ const read = ( path ) => {
         //usuarios.push(newUser);
         //fs.writeFileSync(userPath, JSON.stringify(usuarios,null,2));
         //return res.redirect("login")
-        profile: (req,res) =>{res.render(path.resolve(__dirname,'../views/users/profile'))},
-  
-        }
+        profile: (req,res) =>{
+          db.Usuario.findByPk(req.params.id)
+          .then(function(usuario){
+            return res.render('../views/users/profile', {usuario})
+          })
+       },
 
+       edit: (req,res) => {
+        db.Usuario.findByPk(req.params.id)
+        .then(function(usuario){
+          return res.render("../views/users/editUser", { usuario })
+        })
+        },
+
+        update: (req,res) =>{
+
+            const validaciones = validationResult(req);
+          
+          if (validaciones.errors.length > 0){
+            
+            return res.render("users/editUser",{ validaciones: validaciones.mapped(), old: req.body}); // el metodo mapped pasa el array validaciones a un objeto literal
+          }
+
+
+
+
+            db.Usuario.update({
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 12),
+                age:req.params.age,
+                country_id:req.params.country_id
+              //image: req.file.filename  || "default-image.png"
+                },
+                {
+                where:{id:req.params.id}
+                }
+                );
+               return res.redirect("/user/login")
+
+        }
+    }
     module.exports = userController

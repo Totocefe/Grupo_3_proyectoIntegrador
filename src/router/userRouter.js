@@ -11,7 +11,10 @@ router.get("/register", userController.register);
 router.post("/register",userMulter.single('userImage'), registerValidation ,
 userController.userStore);
 
-router.get("/profile", userController.profile);
+router.get("/profile/:id", userController.profile);
+
+router.get("/editUser/:id", userController.edit);
+router.put("/editUser/:id",userMulter.single('userImage'), registerValidation , userController.update);
 
 router.get("/login", userController.login);
 router.post("/login",loginValidation, userController.processLogin);

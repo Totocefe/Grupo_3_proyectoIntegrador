@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head')%>
+<body>
+    <%-include('../partials/header')%>
+
+        <main class="body-main">
+            <section class="information">
+                <div class="main-information">
+                    
+                    
+                    <form action="/user/editUser/<%= usuario.id%>?_method=PUT" method="post" enctype="multipart/form-data">
+                       <h3 class="h3-login">
+                           Edita tu perfil
+                       </h3>
+                       <div>
+                        <label for="first_name">Nombre:</label>
+                        <input type="text" name="first_name" value="<%= locals.old ? old.first_name : null %>">
+                        <% if (locals.validaciones && validaciones.first_name) { %>
+                        <p style="color:red">
+                            <%= validaciones.first_name.msg %>
+                        </p>
+                        <% } %>
+                        </div>
+                        <div>
+                            <label for="last_name">Apellido:</label>
+                            <input type="text" name="last_name" value="<%= locals.old ? old.last_name : null %>">
+                            <% if (locals.validaciones && validaciones.last_name) { %>
+                                <p style="color:red">
+                                    <%= validaciones.last_name.msg %>
+                                </p>
+                                <% } %>
+                            </div>
+                       
+                        <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" value="<%= locals.old ? old.email : null %>">
+                        <% if (locals.validaciones && validaciones.email) { %>
+                            <p style="color:red">
+                                <%= validaciones.email.msg %>
+                            </p>
+                            <% } %>
+                        </div>
+                        <div>
+                            <label for="password">Contraseña</label>
+                            <input type="text" name="password" value="<%= locals.old ? old.password : null %>">
+                            <% if (locals.validaciones && validaciones.password) { %>
+                                <p style="color:red">
+                                    <%= validaciones.password.msg %>
+                                </p>
+                                <% } %>
+                        </div>
+                        <div>
+                            <label for="age">Edad</label>
+                            <input type="text" name="age" >
+                        </div>
+                        <div>
+                            <label for="country_id">Nacionalidad</label>
+                            <input type="text" name="country_id" >
+                        </div>
+                        
+                        <div> 
+                            <label for="userImage">Foto de perfil</label>  
+                              <input type="file" name="userImage" id="image">
+                        </div>
+                       
+                       
+                        
+                       
+                       
+                        <div>
+                            <button type="submit" class="buttons" style="background-color: rgb(99, 153, 99); color: white; ">Enviar</button>
+    
+                        </div>
+                        
+    
+                     
+                    </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%-include('../partials/footer')%>
+   </body>
+   </html>
+              
+    
