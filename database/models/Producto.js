@@ -16,7 +16,7 @@ module.exports = function(sequelize, dataTypes){
         price:{
              type: dataTypes.DECIMAL.UNSIGNED
         },
-        country_id:{
+        country:{
             type: dataTypes.STRING
         }, 
         categorie:{
@@ -60,10 +60,7 @@ module.exports = function(sequelize, dataTypes){
             foreignKey:"brand_id"
         });
 
-        Producto.belongsTo(models.Pais,{
-            as:"paises",
-            foreignKey:"country_id"
-        })
+        
     }
     
     return Producto;

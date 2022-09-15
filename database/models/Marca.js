@@ -9,12 +9,9 @@ module.exports = function(sequelize, dataTypes){
         },
         name:{
             type: dataTypes.STRING 
-        },
-
-        country_id:{
-            type:dataTypes.INTEGER.UNSIGNED
         }
 
+       
     }
     let config= {
         tableName:"brands", 

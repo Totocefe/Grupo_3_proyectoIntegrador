@@ -6,12 +6,17 @@
             </a>
         </div>
         <div class="logo">
+            <a href="/">
             <img src="/images/mainImages/logo.jpg" alt="Andina productos regionales">
+            </a>
         </div>
         <div class="log-in">
             <a href="/user/login" class="log-in-icon">
             <i class="fas fa-user-alt"></i>
             </a>
+            <% if(user != undefined){ %> 
+            <p><%= user.name %></p>
+            <% } %>
         </div>
         <div class="cart">
             <a href="/product/productCart" class="cart-icon">

@@ -22,8 +22,11 @@ module.exports = function(sequelize, dataTypes){
         age:{
             type: dataTypes.INTEGER.UNSIGNED
         }, 
-        country_id:{
-            type:dataTypes.INTEGER.UNSIGNED
+        country:{
+            type:dataTypes.STRING
+        },
+        image:{
+            type: dataTypes.STRING
         }
 
     }

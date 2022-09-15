@@ -32,14 +32,20 @@ const read = ( path ) => {
     // esto almacena el producto creado segun lo ingresado en el body del formulario
 
     store:(req,res)=>{
+      const errors= validationResult(req);
+
+      if (errors.errors.length > 0){
+        //return res.json(errors);
+        return res.render("admin/crearProd",{ errors: errors.mapped(), old: req.body}); // el metodo mapped pasa el array errors a un objeto literal
+      }
         db.Producto.create({
           name: req.body.name,
               price: req.body.price,
-        country_id: req.body.country,
+              country: req.body.country,
               discount: req.body.discount,
               categorie: req.body.categorie,
               description:req.body.description,
-              //image: req.file.filename  || "default-image.png",
+              image: req.file.filename  || "default-image.png",
         condicion: req.body.condicion
         });
            return res.redirect("/")
@@ -64,6 +70,8 @@ const read = ( path ) => {
 
           // esto guarda los cambios de la edicion del producto pisando en el archivo json los cambios generados en el body del formulario
     update: (req,res)=>{
+
+     
       
         // const id = req.params.id;
         //const productos = read(propath);
@@ -81,12 +89,12 @@ const read = ( path ) => {
             db.Producto.update({
              name: req.body.name,
              price: req.body.price,
-       country_id: req.body.country,
+             country: req.body.country,
              discount: req.body.discount,
              categorie: req.body.categorie,
              description:req.body.description,
-             //image: req.file.filename  || "default-image.png",
-       condicion: req.body.condicion
+             image: req.file.filename  || "default-image.png",
+            condicion: req.body.condicion
             },
             {
              where:{id:req.params.id}

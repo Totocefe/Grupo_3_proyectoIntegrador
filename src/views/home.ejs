@@ -16,7 +16,7 @@
            <article class="vino">
                 <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="Imagen"></a>
                 <img class="new" src="/images/mainImages/new-icon-1497910_1280.webp" alt="">
-                <p><%= productos[i].description %> (Orígen <%= productos[i].country_id %>)</p>
+                <p><%= productos[i].description %>(Orígen <%= productos[i].country %>)</p>
             </article>
 
             
@@ -32,8 +32,8 @@
             <article class="cuzqueña">
                 <a href="/product/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="Imagen"></a>
                 <div class="bottom-article">
-                 <p><%= productos[i].description %>(Orígen <%= productos[i].country_id %>)</p>
-                 <img class="onsale" src="/images/onsale.jpg" alt="on sale">
+                 <p><%= productos[i].description %>(Orígen <%= productos[i].country %>)</p>
+                 
                </div>
             </article>
             <% } %>

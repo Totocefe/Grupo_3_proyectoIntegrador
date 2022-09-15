@@ -26,24 +26,42 @@ const read = ( path ) => {
     const userController = {
         // esto lleva al login del usuario
     login: (req, res) =>{
-      db.Usuario.findAll()
-      .then(function(usuario){
-        return res.render('../views/users/login', {usuario})
-      })
-      
 
-    },
+       return res.render('../views/users/login')
+
+      },
      
     processLogin: (req,res)=>{
 
-        const validaciones = validationResult(req);
+        const errors = validationResult(req);
           
-        if (validaciones.errors.length > 0){
+        if (errors.errors.length > 0){
           
-          return res.render('users/login',{ validaciones: validaciones.mapped(), old: req.body}); // el metodo mapped pasa el array validaciones a un objeto literal
+          return res.render('users/login',{ errors: errors.mapped(), old: req.body}); // el metodo mapped pasa el array errors a un objeto literal
         }else{
+
+          db.Usuario.findOne({where:{email:req.body.email}}) 
+          .then(function(user){
+             if(bcrypt.compareSync(req.body.password, user.password)){
+
+               req.session.user= 
+                {   // aca a session le creo una popiedad llamada como yo quiera y asignarle los datos q quiera inclusive el req.body
+               name: user.first_name ,   // a este session lo voy a poder manejar dentro de este controller xq es donde tengo acceso al request
+                id: user.id,             // para poder usarlo en las vistas tengo q mandarlo de alguna manera xq en las vistas no tengo acceso al request
+                email: user.email ,      // la manera de hacerlo es creando un middleware 
+               
+                };
+               
+              // if(req.session.user){
+                return res.render('users/profile', {user})
+              }else{
+                return res.render('users/login',{errors:{password:{msg:'Credenciales Invalidas'}}})
+              }
+               //}
+          })
           
-            return res.redirect('/user/profile')
+       
+            
         }
     },
 
@@ -67,11 +85,11 @@ const read = ( path ) => {
           //image: req.file.filename  || "default-image.png"
 
           
-          const validaciones = validationResult(req);
+          const errors = validationResult(req);
           
-          if (validaciones.errors.length > 0){
-            
-            return res.render("users/register",{ validaciones: validaciones.mapped(), old: req.body}); // el metodo mapped pasa el array validaciones a un objeto literal
+          if (errors.errors.length > 0){
+            //return res.json(errors);
+            return res.render("users/register",{ errors: errors.mapped(), old: req.body}); // el metodo mapped pasa el array errors a un objeto literal
           }
 
 
@@ -80,10 +98,9 @@ const read = ( path ) => {
           last_name: req.body.last_name,
           email: req.body.email,
           password: bcrypt.hashSync(req.body.password, 12),
-          age:req.params.age,
-          country_id:req.params.country_id
-  
-          //image: req.file.filename  || "default-image.png"
+          age:req.body.age,
+          country:req.body.country,
+          image: req.file.filename  || "default-image.png"
           });
          return res.redirect("login")
         
@@ -92,26 +109,27 @@ const read = ( path ) => {
         //fs.writeFileSync(userPath, JSON.stringify(usuarios,null,2));
         //return res.redirect("login")
         profile: (req,res) =>{
-          db.Usuario.findByPk(req.params.id)
-          .then(function(usuario){
-            return res.render('../views/users/profile', {usuario})
-          })
+         
+         // db.Usuario.findAll()
+         // .then(function(usuario){
+            return res.render('../views/users/profile')
+        // })
        },
 
        edit: (req,res) => {
-        db.Usuario.findByPk(req.params.id)
-        .then(function(usuario){
-          return res.render("../views/users/editUser", { usuario })
-        })
+        db.Usuario.findOne({where:{id:req.params.id}})
+           .then(function(user){
+             return res.render("users/editUser", {user})
+           })
         },
 
         update: (req,res) =>{
 
-            const validaciones = validationResult(req);
+            const errors = validationResult(req);
           
-          if (validaciones.errors.length > 0){
+          if (errors.errors.length > 0){
             
-            return res.render("users/editUser",{ validaciones: validaciones.mapped(), old: req.body}); // el metodo mapped pasa el array validaciones a un objeto literal
+            return res.render("users/editUser",{ errors: errors.mapped(), old: req.body}); // el metodo mapped pasa el array errors a un objeto literal
           }
 
 
@@ -123,8 +141,8 @@ const read = ( path ) => {
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 12),
                 age:req.params.age,
-                country_id:req.params.country_id
-              //image: req.file.filename  || "default-image.png"
+                country:req.params.country,
+                image: req.file.filename  || "default-image.png"
                 },
                 {
                 where:{id:req.params.id}

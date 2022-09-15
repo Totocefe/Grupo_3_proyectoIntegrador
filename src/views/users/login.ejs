@@ -6,6 +6,11 @@
     <main class="body-main">
         <section class="information">
             <div class="main-information">
+                <div style="color: red" class="errores">
+                    <ul>
+
+                    </ul>
+                </div>
                 
                 <form action="/user/login" method="post">
                    <h3 class="h3-login">
@@ -14,22 +19,28 @@
                    
                     <div>
                     <label for="email">Email:</label>
-                    <input type="email" name="email" value="<%= locals.old ? old.email : null %>">
-                    <% if (locals.validaciones && validaciones.email) { %>
-                        <p style="color:red">
-                            <%= validaciones.email.msg %>
+                    <input type="email" name="email" id="email" value="<%= locals.old ? old.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <p  style="color:red">
+                            <%= errors.email.msg %>
                         </p>
                         <% } %>
+                        <p style="color: red" id="errorEmail">
+
+                        </p>
                     
                     </div>
                     <div>
                         <label for="password">Contraseña</label>
-                        <input type="text" name="password" >
-                        <% if (locals.validaciones && validaciones.password) { %>
-                            <p style="color:red">
-                                <%= validaciones.password.msg %>
+                        <input type="text" name="password" id="password">
+                        <% if (locals.errors && errors.password) { %>
+                            <p  style="color:red">
+                                <%= errors.password.msg %>
                             </p>
                             <% } %>
+                            <p style="color: red" id="errorPassword">
+                            
+                            </p>
                         
                     </div>
                     <div class="forgot">
@@ -54,6 +65,7 @@
         </section>
     </main>
     <%-include('../partials/footer')%>
+    <script src="/js/validLogin.js"></script>
 </body>
 </html>
     

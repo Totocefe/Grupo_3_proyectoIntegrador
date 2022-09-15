@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `brands` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(200) DEFAULT NULL,
-  `country_id` int(11) DEFAULT NULL
+ 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -45,16 +45,7 @@ CREATE TABLE `cart` (
   `products_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `country`
---
-
-CREATE TABLE `country` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -67,12 +58,12 @@ CREATE TABLE `products` (
   `name` varchar(200) DEFAULT NULL,
   `description` varchar(200) DEFAULT NULL,
   `price` int(10) UNSIGNED DEFAULT NULL,
-  `country_id` int(10) UNSIGNED DEFAULT NULL,
+  `country` varchar(200),
   `categorie` varchar(200) DEFAULT NULL,
   `discount` decimal(10,0) DEFAULT NULL,
   `condicion` varchar(200) DEFAULT NULL,
   `brand_id` int(10) UNSIGNED DEFAULT NULL,
-  `image` int(11) DEFAULT NULL,
+  `image` varchar(200,)
   `users_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -101,7 +92,8 @@ CREATE TABLE `users` (
   `email` varchar(200) DEFAULT NULL,
   `password` varchar(200) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
-  `country_id` int(10) UNSIGNED NOT NULL
+  `country` varchar(200),
+   `image` varchar(200,)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

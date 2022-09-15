@@ -7,7 +7,7 @@ const userPath = path.join(__dirname, "../db/users.json");
 // aca requiero a la funcion validation result para poder hacer efectivas las validaciones del router
 const {validationResult} = require("express-validator");
 // aca guardo en una variable el acceso a los modelos
-const db = require('../../database/models');
+const db = require('../../../database/models');
 //accedo a sequelize
 const sequelize = db.sequelize;
 // aca guardo en una variable el acceso a los operadores de sequelize
@@ -22,18 +22,41 @@ const read = ( path ) => {
     return datosparsed;
 }
 
-const mainController = {
+const apiUserController = {
 
   // esto lleva al home junto con la lista de productos
-    home: (req, res) => {
-        db.Producto.findAll(
-          
-      )
-        .then(function(productos){
-        return res.render("home",{productos:productos});
+    list: (req, res) => {
+        db.Usuario.findAll({attributes:['id','first_name','email','image']})
+
+        .then(function(usuarios){
+            
+        return res.status(200).json({
+            meta:{code:res.statusCode},
+            count:usuarios.length,
+            users:[usuarios],            
+            detail:'http://localhost:3000/api/user/:id'
+                  
         });
+        });
+    },
+    detail: (req,res) =>{
+        db.Usuario.findByPk(req.params.id)
+           .then(function(Usuario){
+             return res.status(200).json({
+                meta:{code:res.statusCode},
+                name:Usuario.first_name,
+                last_name:Usuario.last_name,
+                age: Usuario.country,
+                country: Usuario.country,
+                image: req.protocol + '://' + req.get("host") + '/images/users/' + Usuario.image
+
+
+ 
+
+           })
+           })
     }
     
 }
 
-module.exports = mainController;
+module.exports = apiUserController;

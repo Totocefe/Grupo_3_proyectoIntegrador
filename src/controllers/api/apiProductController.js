@@ -7,7 +7,7 @@ const userPath = path.join(__dirname, "../db/users.json");
 // aca requiero a la funcion validation result para poder hacer efectivas las validaciones del router
 const {validationResult} = require("express-validator");
 // aca guardo en una variable el acceso a los modelos
-const db = require('../../database/models');
+const db = require('../../../database/models');
 //accedo a sequelize
 const sequelize = db.sequelize;
 // aca guardo en una variable el acceso a los operadores de sequelize
@@ -22,18 +22,45 @@ const read = ( path ) => {
     return datosparsed;
 }
 
-const mainController = {
+const apiUserController = {
 
   // esto lleva al home junto con la lista de productos
-    home: (req, res) => {
-        db.Producto.findAll(
-          
-      )
+    list: (req, res) => {
+        db.Producto.findAll({attributes:['id','name','description']})
+
         .then(function(productos){
-        return res.render("home",{productos:productos});
+            
+        return res.status(200).json({
+            meta:{code:res.statusCode},
+            count:productos.length,
+            countByCategory:{
+                almacen:0,
+                alcohol:0
+            },
+            products:[productos],            
+            detail:'http://localhost:3000/api/product/:id'
+                  
         });
+        });
+    },
+    detail: (req,res) =>{
+        db.Producto.findByPk(req.params.id)
+           .then(function(producto){
+             return res.status(200).json({
+                meta:{code:res.statusCode},
+                id: producto.id,
+                name: producto.name,
+                description: producto.description,
+                price: producto.price,
+                country: producto.country,
+                categorie: producto.categorie,
+                discount: producto.discount,
+                condition: producto.condition,
+                image: req.protocol + '://' + req.get("host") + '/images/products/' + producto.image
+           })
+           })
     }
     
 }
 
-module.exports = mainController;
+module.exports = apiUserController;

@@ -7,12 +7,12 @@
         <section class="information">
             <div class="main-information">
                 <div>
-                    <img src="/images/products/default-image.png" alt="">
-                    <p>Hola <%= usuario.first_name %> !!</p>
+                    <img src="/images/users/<%= user.image %>" alt="">
+                    <p>Hola <%= user.first_name %> !!</p>
                     <a href="/">
                         <button type="submit" style="background-color: rgb(99, 153, 99); color: white;" ;>Ir a la Pagina Pincipal</button>
                     </a>
-                     <a href="./editUser/<%= usuario.id %>">
+                     <a href="/user/editUser/<%= user.id %>">
                          <button type="submit" style="background-color: rgb(99, 153, 99); color: white; ">Editar perfil</button>
                      </a>
                      <form action="" method="post">
