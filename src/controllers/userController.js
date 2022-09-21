@@ -49,7 +49,7 @@ const read = ( path ) => {
                name: user.first_name ,   // a este session lo voy a poder manejar dentro de este controller xq es donde tengo acceso al request
                 id: user.id,             // para poder usarlo en las vistas tengo q mandarlo de alguna manera xq en las vistas no tengo acceso al request
                 email: user.email ,      // la manera de hacerlo es creando un middleware 
-               
+                image: user.image
                 };
                
               // if(req.session.user){

@@ -1,10 +1,10 @@
 
 const express = require("express");
 const path = require('path');
-const PORT = process.env.PORT || 3000; 
+const PORT = process.env.PORT || 3001; 
 const app = express();
 const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
- 
+const cors = require('cors');
 
 const session = require("express-session");// primero va el require de session y despues el middleware de session por una cuestion logiica de q no puedo aplicar algo q todavia no esta configurado
 const middlewareDeSession = require ('./middleware/userLogged');// requiero el middleware de session. al ponerla aca la estoy declarando de manera global en vez de ponerlo en cada ruta
@@ -25,6 +25,7 @@ const publicPath= path.resolve(__dirname, '../public');
 app.set('view engine', 'ejs'); // estos 2 son para ejecutar ejs
 app.set('views',path.join(__dirname, 'views'));
 
+app.use(cors());
 app.use(session({secret: "secretosssss", resave: false, saveUninitialized: false,})); // configuro session a partir de ahora tengo disponible a session desde cualquier llamandolo desde el req (req.session)
 app.use(middlewareDeSession); // pongo a usar el middleware de session
 app.use(express.static(publicPath));

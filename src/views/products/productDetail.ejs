@@ -14,20 +14,24 @@
                     </div>
                     <div class="article-description">
                         <p class="description"><%= producto.description %> (Orígen <%= producto.country %>)</p>
-                        <p class="price">$<%= producto.price %> (10% OFF SI ESTAS REGISTRADO)</p>
+                        <p class="price">$<%= producto.price %></p>
                         <p class="add-cart"><a href="#">Agregar al carrito</a></p>
                        
                     </div>
-                    
+                        <% let admin = 'totocefe@hotmail.com'; if (locals.user && user.email == admin) { %>
                         <a href="/admin/editarProd/<%= producto.id %>">
-                       <button type="submit" style="background-color: rgb(99, 153, 99); color: white; ">Editar Producto</button>
-                       </a>
-                        
+                            <button type="submit" style="background-color: rgb(99, 153, 99); color: white; ">Editar Producto</button>
+                        </a>
+                        <a href="/admin/crearProd">
+                            <button type="submit" style="background-color: rgb(99, 153, 99); color: white; ">Crear Producto</button>
+                         </a>
+                         
                     
                     
                         <form action="/admin/<%= producto.id %>?_method=DELETE" method="post">
                            <button type="submit" style="background-color: rgb(99, 153, 99); color: white; ">Eliminar Producto</button>
                         </form>
+                        <% } %>
                     
                 </article>
             </div>

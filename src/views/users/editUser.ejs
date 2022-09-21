@@ -43,7 +43,7 @@
                         </div>
                         <div>
                             <label for="password">Contraseña</label>
-                            <input type="text" name="password" value="<%= user.password %>">
+                            <input type="text" name="password" 
                             <% if (locals.validaciones && validaciones.password) { %>
                                 <p style="color:red">
                                     <%= validaciones.password.msg %>

@@ -38,7 +38,7 @@ const apiUserController = {
                 alcohol:0
             },
             products:[productos],            
-            detail:'http://localhost:3000/api/product/:id'
+            detail:'http://localhost:3001/api/product/:id'
                   
         });
         });

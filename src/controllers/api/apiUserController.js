@@ -34,7 +34,7 @@ const apiUserController = {
             meta:{code:res.statusCode},
             count:usuarios.length,
             users:[usuarios],            
-            detail:'http://localhost:3000/api/user/:id'
+            detail:'http://localhost:3001/api/user/:id'
                   
         });
         });

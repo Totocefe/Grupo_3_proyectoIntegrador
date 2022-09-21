@@ -1,9 +1,7 @@
 <header class="main-header">
     <div class="top-header">
         <div class="burguer-button">
-            <a href="#" >
-            <i class="fas fa-bars"></i>
-            </a>
+           
         </div>
         <div class="logo">
             <a href="/">
@@ -14,9 +12,11 @@
             <a href="/user/login" class="log-in-icon">
             <i class="fas fa-user-alt"></i>
             </a>
-            <% if(user != undefined){ %> 
+            <a href="/user/profile">
+            <% if(locals.user){ %> 
             <p><%= user.name %></p>
             <% } %>
+            </a>
         </div>
         <div class="cart">
             <a href="/product/productCart" class="cart-icon">

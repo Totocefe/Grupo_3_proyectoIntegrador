@@ -7,8 +7,10 @@
         <section class="information">
             <div class="main-information">
                 <div>
+                    <% if(locals.user) { %> 
                     <img src="/images/users/<%= user.image %>" alt="">
-                    <p>Hola <%= user.first_name %> !!</p>
+                    <p>Hola <%= user.name %> !!</p>
+                    <% } %>
                     <a href="/">
                         <button type="submit" style="background-color: rgb(99, 153, 99); color: white;" ;>Ir a la Pagina Pincipal</button>
                     </a>
